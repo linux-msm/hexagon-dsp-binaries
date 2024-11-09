@@ -1,0 +1,17 @@
+name: Check
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+jobs:
+  check:
+    name: make check
+    runs-on: debian-bookworm
+    permissions:
+      actions: read
+      contents: read
+
+    steps:
+      - name: Check
+        run: make check

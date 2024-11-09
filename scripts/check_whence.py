@@ -110,6 +110,9 @@ def main():
         if os.path.dirname(file) == 'scripts':
             continue
 
+        if os.path.dirname(file) == '.github/workflows':
+            continue
+
         if file in known_files:
             continue
 
