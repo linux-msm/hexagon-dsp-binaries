@@ -71,7 +71,7 @@ Origin: https://releases.linaro.org/96boards/rb5/qualcomm/firmware/RB5_firmware_
 
 --------------------------------------------------------------------------
 
-Dir: qcm2290/Thundercomm/RB1/ADSP.VT.5.4.1.c4-00013-KAMORTA-1
+Dir: qcm2290/Thundercomm/RB1/ADSP.VT.5.4.1.c4-00013-KAMORTA-2
 Device: Thundercomm / Qualcomm Robotics RB1 Platform
 Licence: LICENSE.qcom
 Status: Redistributable

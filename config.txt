@@ -20,4 +20,4 @@ Install: qcm2290/Thundercomm/RB1/	adsp	ADSP.VT.5.4.1.c4-00013-KAMORTA-1
 
 # RB2
 Install: qrb4210/Thundercomm/RB2/	adsp	ADSP.VT.5.4.1.c4-00013-KAMORTA-1
-Install: qrb4210/Thundercomm/RB2/	cdsp	CDSP.VT.2.4.1-00269-KAMORTA-1
+Install: qrb4210/Thundercomm/RB2/	cdsp	CDSP.VT.2.4.1-00269-KAMORTA-2
