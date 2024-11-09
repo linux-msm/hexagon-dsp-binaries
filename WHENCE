@@ -93,3 +93,12 @@ Device: Thundercomm / Qualcomm Robotics RB2 Platform
 Licence: LICENSE.qcom
 Status: Redistributable
 Origin: https://releases.linaro.org/96boards/rb2/qualcomm/firmware/RB2_firmware_20231124-v4.zip
+
+--------------------------------------------------------------------------
+
+Dir: qcm6490/Thundercomm/RB3gen2/ADSP.HT.5.5.c8-00149-KODIAK-1
+Dir: qcm6490/Thundercomm/RB3gen2/CDSP.HT.2.5.c3-00077-KODIAK-1
+Device: Thundercomm / Qualcomm Robotics RB2 Platform
+Licence: LICENSE.qcom
+Status: Redistributable
+Origin: https://artifacts.codelinaro.org/artifactory/qli-ci/software/chip/qualcomm_linux-spf-1-0/qualcomm-linux-spf-1-0_test_device_public/r1.0_00039.2/QCM6490.LE.1.0/common/build/ufs/bin/QCM6490_dspso.zip
