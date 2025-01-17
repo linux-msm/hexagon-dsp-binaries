@@ -22,6 +22,27 @@ fi
 
 mkdir -p "${DST}"
 
+# dstdir srcdir
+do_licence() {
+	found=0
+	while read line ; do
+		[ "$line" = "Dir: $2" ] && break
+	done
+	while read line ; do
+		lic=${line##Licence: }
+		if [ "$lic" != "$line" ]
+		then
+			install -m 0644 $lic "$1" || exit 1
+			found=1
+			break
+		fi
+	done
+	if [ $found -eq 0 ] ; then
+		echo "License for $2 not found"
+		exit 1
+	fi
+}
+
 # dest subdir DSP QC_IMAGE_VERSION_STRING
 # FIXME: maybe install only a fixed set of files
 do_install() {
@@ -31,9 +52,7 @@ do_install() {
 	mkdir -p "${dstdir}"
 	install -m 0644 "${srcdir}"/* "${dstdir}"
 
-	# FIXME: if the licence ever changes, it has to be read from the WHENCE
-	# file.
-	install -m 0644 LICENSE.qcom "${dstdir}"
+	do_licence "${dstdir}" "${srcdir}" < WHENCE
 }
 
 # dest target link
@@ -55,7 +74,7 @@ do
 	"Link:" )
 		do_link ${DST} ${rest}
 		;;
-	"*" )
+	* )
 		echo "Unsupported clause ${verb}" >&2
 		exit 1
 	esac

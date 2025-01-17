@@ -16,12 +16,19 @@ Install: sm8250/Thundercomm/RB5		cdsp	CDSP.HT.2.3.c1-00076-SM8250-1
 Install: sm8250/Thundercomm/RB5		sdsp	SLPI.HY.3.1-00032-SM8250AZL-1
 
 # RB1
-Install: qcm2290/Thundercomm/RB1/	adsp	ADSP.VT.5.4.1.c4-00013-KAMORTA-1
+Install: qcm2290/Thundercomm/RB1	adsp	ADSP.VT.5.4.1.c4-00013-KAMORTA-1
 
 # RB2
-Install: qrb4210/Thundercomm/RB2/	adsp	ADSP.VT.5.4.1.c4-00013-KAMORTA-1
-Install: qrb4210/Thundercomm/RB2/	cdsp	CDSP.VT.2.4.1-00269-KAMORTA-1
+Install: qrb4210/Thundercomm/RB2	adsp	ADSP.VT.5.4.1.c4-00013-KAMORTA-1
+Install: qrb4210/Thundercomm/RB2	cdsp	CDSP.VT.2.4.1-00269-KAMORTA-1
 
 # RB3gen2
 Install: qcm6490/Thundercomm/RB3gen2	adsp	ADSP.HT.5.5.c8-00149-KODIAK-1
 Install: qcm6490/Thundercomm/RB3gen2	cdsp	CDSP.HT.2.5.c3-00077-KODIAK-1
+
+# SA8775P RIDE
+Install: sa8775p/Qualcomm/SA8775P-RIDE	adsp	adsp-DSP.AT.1.0.1-00079.2-LEMANS-1
+Install: sa8775p/Qualcomm/SA8775P-RIDE	cdsp	cdsp-DSP.AT.1.0.1-00079.2-LEMANS-1
+Install: sa8775p/Qualcomm/SA8775P-RIDE	cdsp1	cdsp1-DSP.AT.1.0.1-00079.2-LEMANS-1
+Install: sa8775p/Qualcomm/SA8775P-RIDE	gdsp0	gdsp0-DSP.AT.1.0.1-00079.2-LEMANS-1
+Install: sa8775p/Qualcomm/SA8775P-RIDE	gdsp1	gdsp1-DSP.AT.1.0.1-00079.2-LEMANS-1

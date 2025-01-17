@@ -21,6 +21,6 @@ dist:
 	@rm -rf release
 
 check:
-	./scripts/check_whence.py
+	./scripts/check.py
 
 .PHONY: dist check
