@@ -74,7 +74,7 @@ do
 	"Link:" )
 		do_link ${DST} ${rest}
 		;;
-	"*" )
+	* )
 		echo "Unsupported clause ${verb}" >&2
 		exit 1
 	esac
