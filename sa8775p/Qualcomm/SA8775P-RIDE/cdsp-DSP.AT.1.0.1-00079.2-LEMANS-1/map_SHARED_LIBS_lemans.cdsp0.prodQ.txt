@@ -1,0 +1,15 @@
+../../build/ms/dynamic_modules/lemans.cdsp0.prod/libsysmondomain_skel.so
+../../build/ms/dynamic_modules/lemans.cdsp0.prod/libstabilitydomain_skel.so
+../../build/ms/dynamic_modules/lemans.cdsp0.prod/libsysmonquery_skel.so
+../../build/ms/dynamic_modules/lemans.cdsp0.prod/libbenchmark_skel.so
+../../build/ms/dynamic_modules/lemans.cdsp0.prod/libsysmonhvxthrottle_skel.so
+../../build/ms/dynamic_modules/lemans.cdsp0.prod/libcrm_test_skel.so
+../../build/ms/dynamic_modules/lemans.cdsp0.prod/libsysmondspload_skel.so
+../../build/ms/dynamic_modules/lemans.cdsp0.prod/libdsp_cfg_test_skel.so
+../../build/ms/dynamic_modules/lemans.cdsp0.prod/version.so
+../../build/ms/dynamic_modules/lemans.cdsp0.prod/example_image.so
+../../build/ms/dynamic_modules/lemans.cdsp0.prod/libloadalgo_skel.so
+../../build/ms/dynamic_modules/lemans.cdsp0.prod/fastrpc_shell_3
+../../build/ms/dynamic_modules/lemans.cdsp0.prod/fastrpc_shell_unsigned_3
+../../build/ms/dynamic_modules/lemans.cdsp0.prod/libc++.so.1
+../../build/ms/dynamic_modules/lemans.cdsp0.prod/libc++abi.so.1

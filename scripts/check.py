@@ -21,6 +21,9 @@ def verify_data(data):
         elif not os.path.isdir(entry):
             sys.stderr.write("WHENCE:%d: %s is not a directory\n" % (lineno, entry))
             ret = False
+        elif entry.endswith("/"):
+            sys.stderr.write("WHENCE:%d: stray ending '/' in %s\n" % (lineno, entry))
+            ret = False
 
     if 'licence' in data:
         lic, lineno = data['licence']
@@ -77,6 +80,46 @@ def load_whence():
     # return final data entry, might be empty
     yield data
 
+def load_config():
+    with open("config.txt", encoding="utf-8") as file:
+        pattern_empty = re.compile("^#|^$")
+        pattern_data = re.compile("Install: ([^ \t]+)[ \t]+([^ \t]+)[ \t]+([^ \t]+)\n")
+
+        for (lineno, line) in enumerate(file, start=1):
+            if pattern_empty.match(line):
+                continue
+            match = pattern_data.match(line)
+            if match:
+                yield (lineno, match.group(1), match.group(2), match.group(3))
+                continue
+
+            raise Exception("config.txt: %d: failed to parse '%s'" % (lineno, line[:-1]))
+
+DSPS = [ "adsp", "cdsp", "sdsp", "cdsp1", "gdsp0", "gdsp1" ]
+
+def check_config(data, dirs):
+    (lineno, path, dsp, subdir) = data
+    ret = True
+
+    if path.endswith("/"):
+        sys.stderr.write("config.txt: %d: trailing '/' in %s\n" % (lineno, path))
+        ret = False
+
+    if subdir.endswith("/"):
+        sys.stderr.write("config.txt: %d: trailing '/' in %s\n" % (lineno, subdir))
+        ret = False
+
+    full = "%s/%s" % (path, subdir)
+    if full not in dirs:
+        sys.stderr.write("config.txt: %d: path '%s' not found in WHENCE\n" % (lineno, full))
+        ret = False
+
+    if dsp not in DSPS:
+        sys.stderr.write("config.txt: %d: unknown DSP type '%s'\n" % (lineno, dsp))
+        ret = False
+
+    return ret
+
 def list_git():
     git = os.popen("git ls-files")
     for file in git:
@@ -117,6 +160,15 @@ def main():
             continue
 
         sys.stderr.write("WHENCE: file %s is not under a listed directory\n" % file)
+        okay = False
+
+    try:
+        for data in load_config():
+            if not check_config(data, dirs):
+                okay = False
+
+    except Exception as e:
+        sys.stderr.write("%s\n" % e)
         okay = False
 
     return 0 if okay else 1
