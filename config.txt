@@ -13,7 +13,7 @@ Install: sdm845/Thundercomm/db845c	sdsp	SLPI.HY.1.0-00365-SDM845AZL-1
 # RB5
 Install: sm8250/Thundercomm/RB5		adsp	ADSP.HT.5.3.c2-00082-SM8250-1
 Install: sm8250/Thundercomm/RB5		cdsp	CDSP.HT.2.3.c1-00076-SM8250-1
-Install: sm8250/Thundercomm/RB5		sdsp	SLPI.HY.3.1-00032-SM8250AZL-1
+Install: sm8250/Thundercomm/RB5		sdsp	SLPI.HY.3.1-00049-SM8250AZL-2
 
 # RB1
 Install: qcm2290/Thundercomm/RB1	adsp	ADSP.VT.5.4.1.c4-00013-KAMORTA-1
