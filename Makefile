@@ -5,6 +5,8 @@ DSPDIR = ${prefix}/share/qcom
 
 all:
 
+clean:
+
 install:
 	./scripts/install.sh config.txt ${DESTDIR}/${DSPDIR}
 
