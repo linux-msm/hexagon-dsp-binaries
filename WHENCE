@@ -105,6 +105,15 @@ Origin: https://artifacts.codelinaro.org/artifactory/qli-ci/software/chip/qualco
 
 --------------------------------------------------------------------------
 
+Dir: qcm6490/Thundercomm/RB3gen2/ADSP.HT.5.5.c8-00217-KODIAK-1
+Dir: qcm6490/Thundercomm/RB3gen2/CDSP.HT.2.5.c3-00103-KODIAK-1
+Device: Thundercomm / Qualcomm Robotics RB3Gen2 Platform
+Licence: LICENSE.qcom
+Status: Redistributable
+Origin: https://qartifactory-edge.qualcomm.com/ui/native/qsc_releases/software/chip/qualcomm_linux-spf-1-0/qualcomm-linux-spf-1-0_test_device_public/r1.0_00095.0/qcm6490-le-1-0/common/build/ufs/bin/QCM6490_dspso.zip
+
+--------------------------------------------------------------------------
+
 Dir: sa8775p/Qualcomm/SA8775P-RIDE/adsp-DSP.AT.1.0.1-00079.2-LEMANS-1
 Dir: sa8775p/Qualcomm/SA8775P-RIDE/cdsp-DSP.AT.1.0.1-00079.2-LEMANS-1
 Dir: sa8775p/Qualcomm/SA8775P-RIDE/cdsp1-DSP.AT.1.0.1-00079.2-LEMANS-1
