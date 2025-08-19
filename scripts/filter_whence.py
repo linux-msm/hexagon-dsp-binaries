@@ -1,4 +1,6 @@
 #! /usr/bin/python3
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2024 Linaro Ltd.
 
 import os, re, sys
 

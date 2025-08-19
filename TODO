@@ -1,6 +1,0 @@
-[ ] Document config.txt file format in a more complete way
-[ ] Provide sensors-related data for RB1/2/3/5 (as used by hexagonrpcd)
-[ ] Add DSP binaries for RB3gen2 board
-[ ] Implement Debian and RPM packaging support
-[x] Add tarball generation support via `make dist`
-[ ] Implement `make check support`

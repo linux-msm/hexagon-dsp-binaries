@@ -1,5 +1,6 @@
 #! /bin/sh
 # SPDX-License-Identifier: MIT
+# Copyright (c) 2024 Linaro Ltd.
 #
 # Install DSP shell and libraries
 

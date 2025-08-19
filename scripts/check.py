@@ -1,4 +1,6 @@
 #! /usr/bin/python3
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2024-2025 Linaro Ltd.
 
 import os, re, sys
 
@@ -131,7 +133,7 @@ def list_git():
 def main():
     okay = True
     dirs = {}
-    licences = {}
+    licences = {'LICENSE.MIT' : None}
 
     for data in load_whence():
         if not verify_data(data):
