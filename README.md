@@ -25,17 +25,4 @@ top of the tree of the linux-firmware repo.
 
 # Data origin
 
-Binary files for the DragonBoard 820c have been extracted from the adspso.bin
-partition image provided by Qualcomm as a part of the BSP archive
-[linux-board-support-package-r01700.1.zip](https://releases.linaro.org/96boards/dragonboard820c/qualcomm/firmware/linux-board-support-package-r01700.1.zip)
-mirrored by Linaro. The archive is covered by [LICENSE.qcom](LICENSE.qcom).
-
-Binary files for the DragonBoard 845c (aka RB3) and other Robotics Platforms
-(RB1, RB2, etc) have been extracted from the dspso.bin partition images
-provided by Thundercomm under the terms of [LICENSE.qcom](LICENSE.qcom) as a
-part of the platform-enablement archives. These archives are hosted by Linaro,
-see
-- https://releases.linaro.org/96boards/dragonboard845c/qualcomm/firmware/
-- https://releases.linaro.org/96boards/rb1/qualcomm/firmware/
-- https://releases.linaro.org/96boards/rb2/qualcomm/firmware/
-- https://releases.linaro.org/96boards/rb5/qualcomm/firmware/
+WHENCE file documents orignal locations for the tarballs with the library files.
