@@ -126,6 +126,18 @@ Origin: https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/software
 
 --------------------------------------------------------------------------
 
+Dir: sa8775p/Qualcomm/SA8775P-RIDE/adsp-DSP.AT.1.0.1-00125.5-LEMANS-1
+Dir: sa8775p/Qualcomm/SA8775P-RIDE/cdsp-DSP.AT.1.0.1-00125.5-LEMANS-1
+Dir: sa8775p/Qualcomm/SA8775P-RIDE/cdsp1-DSP.AT.1.0.1-00125.5-LEMANS-1
+Dir: sa8775p/Qualcomm/SA8775P-RIDE/gdsp0-DSP.AT.1.0.1-00125.5-LEMANS-1
+Dir: sa8775p/Qualcomm/SA8775P-RIDE/gdsp1-DSP.AT.1.0.1-00125.5-LEMANS-1
+Device: Qualcomm SA8775P RIDE
+Licence: LICENSE.qcom-2
+Status: Redistributable
+Origin: https://qartifactory-edge.qualcomm.com/ui/native/qsc_releases/software/chip/qualcomm_linux-spf-1-0/qualcomm-linux-spf-1-0_test_device_public/r1.0_00095.0/qcs9100-le-1-0/common/build/ufs/bin/QCS9100_dspso.zip
+
+--------------------------------------------------------------------------
+
 Dir: qcs8300/Qualcomm/QCS8300-RIDE/adsp-DSP.AT.1.0.1-00096-LEMANS-1
 Dir: qcs8300/Qualcomm/QCS8300-RIDE/cdsp-DSP.AT.1.0.1-00096-LEMANS-1
 Dir: qcs8300/Qualcomm/QCS8300-RIDE/gdsp0-DSP.AT.1.0.1-00096-LEMANS-1

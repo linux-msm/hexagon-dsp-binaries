@@ -27,11 +27,11 @@ Install: qcm6490/Thundercomm/RB3gen2	adsp	ADSP.HT.5.5.c8-00217-KODIAK-1
 Install: qcm6490/Thundercomm/RB3gen2	cdsp	CDSP.HT.2.5.c3-00103-KODIAK-1
 
 # SA8775P RIDE
-Install: sa8775p/Qualcomm/SA8775P-RIDE	adsp	adsp-DSP.AT.1.0.1-00079.2-LEMANS-1
-Install: sa8775p/Qualcomm/SA8775P-RIDE	cdsp	cdsp-DSP.AT.1.0.1-00079.2-LEMANS-1
-Install: sa8775p/Qualcomm/SA8775P-RIDE	cdsp1	cdsp1-DSP.AT.1.0.1-00079.2-LEMANS-1
-Install: sa8775p/Qualcomm/SA8775P-RIDE	gdsp0	gdsp0-DSP.AT.1.0.1-00079.2-LEMANS-1
-Install: sa8775p/Qualcomm/SA8775P-RIDE	gdsp1	gdsp1-DSP.AT.1.0.1-00079.2-LEMANS-1
+Install: sa8775p/Qualcomm/SA8775P-RIDE	adsp	adsp-DSP.AT.1.0.1-00125.5-LEMANS-1
+Install: sa8775p/Qualcomm/SA8775P-RIDE	cdsp	cdsp-DSP.AT.1.0.1-00125.5-LEMANS-1
+Install: sa8775p/Qualcomm/SA8775P-RIDE	cdsp1	cdsp1-DSP.AT.1.0.1-00125.5-LEMANS-1
+Install: sa8775p/Qualcomm/SA8775P-RIDE	gdsp0	gdsp0-DSP.AT.1.0.1-00125.5-LEMANS-1
+Install: sa8775p/Qualcomm/SA8775P-RIDE	gdsp1	gdsp1-DSP.AT.1.0.1-00125.5-LEMANS-1
 
 # QCS8300 RIDE
 Install: qcs8300/Qualcomm/QCS8300-RIDE	adsp	adsp-DSP.AT.1.0.1-00096-LEMANS-1
