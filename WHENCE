@@ -158,6 +158,16 @@ Origin: https://qartifactory-edge.qualcomm.com/ui/native/qsc_releases/software/c
 
 --------------------------------------------------------------------------
 
+Dir: qcs8300/Qualcomm/QCS8300-RIDE/adsp-DSP.AT.1.0.1-00163-LEMANS-1
+Dir: qcs8300/Qualcomm/QCS8300-RIDE/cdsp-DSP.AT.1.0.1-00163-LEMANS-1
+Dir: qcs8300/Qualcomm/QCS8300-RIDE/gdsp0-DSP.AT.1.0.1-00163-LEMANS-1
+Device: Qualcomm Technologies, Inc. QCS8300 Ride
+Licence: LICENSE.qcom-2
+Status: Redistributable
+Origin: https://softwarecenter.qualcomm.com/nexus/generic/software/chip/qualcomm_linux-spf-1-0/qualcomm-linux-spf-1-0_test_device_public/r1.0_00103.0/qcs8300-le-1-0/common/build/ufs/bin/QCS8300_dspso.zip
+
+--------------------------------------------------------------------------
+
 Dir: qcs615/Qualcomm/QCS615-RIDE/adsp-ADSP.VT.5.2.c6-00059-SM6150-1
 Dir: qcs615/Qualcomm/QCS615-RIDE/cdsp-CDSP.VT.2.2.c4-00019-SM6150-1
 Device: Qualcomm Technologies, Inc. QCS615 Ride
