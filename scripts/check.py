@@ -134,6 +134,41 @@ def list_git():
     if git.close():
         sys.stderr.write("WHENCE: skipped contents validation, git file listing failed\n")
 
+def check_dir(subdir):
+    pattern_shell = re.compile("^fastrpc_shell(_unsigned)?_[0-9]$")
+    # XXX: do we need to be that precise for map files?
+    pattern_map1 = re.compile("^map_SHARED_LIBS_[a-z0-9]*\\.(a|c|gp)dsp[01]?\\.prodQ\\.txt$")
+    pattern_map2 = re.compile("^map_AVS_SHARED_LIBS_[a-z0-9]*\\.adsp\\.prodQ\\.txt$")
+    pattern_map3 = re.compile("^map_SLPI_SHARED_LIBS_[a-z0-9]*\\.slpi\\.prodQ\\.txt$")
+    pattern_map4 = re.compile("^map_SSC_SLPI_USER_[a-z0-9]*\\.slpi\\.prodQ\\.txt$")
+    pattern_map5 = re.compile("^map_SENSOR_IMG_[a-z0-9]*\\.adsp\\.prodQ_SHARED_LIBS\\.txt$")
+    pattern_map6 = re.compile("^map_(AVS_)?SHARED_LIBS_AAAAAAAAQ\\.txt$")
+    pattern_map7 = re.compile("^map_SSC_SLPI_USER_AAAAAAAAQ\\.txt$")
+    pattern_library = re.compile("^[-_+0-9a-zA-Z]*\\.so(\\.[0-9]*)?$")
+
+    okay = True
+
+    for file in os.listdir(subdir):
+        fullname = os.path.join(subdir, file)
+
+        if not os.path.isfile(fullname):
+            sys.stderr.write("WHENCE: not a file %s\n" % fullname)
+            okay = False
+
+        if not pattern_shell.match(file) and \
+           not pattern_map1.match(file) and \
+           not pattern_map2.match(file) and \
+           not pattern_map3.match(file) and \
+           not pattern_map4.match(file) and \
+           not pattern_map5.match(file) and \
+           not pattern_map6.match(file) and \
+           not pattern_map7.match(file) and \
+           not pattern_library.match(file):
+               sys.stderr.write("WHENCE: unknown file type %s\n" % fullname)
+               okay = False
+
+    return okay
+
 def main():
     okay = True
     dirs = {}
@@ -176,6 +211,11 @@ def main():
     except Exception as e:
         sys.stderr.write("%s\n" % e)
         okay = False
+
+    for entry in dirs.keys():
+        if not check_dir(entry):
+            sys.stderr.write("WHENCE: subdir %s failed the checks\n" % entry)
+            okay = False
 
     return 0 if okay else 1
 
