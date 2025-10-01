@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2024-2025 Linaro Ltd.
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+
 # Format
 # Install: subdir			DSP	QC_IMAGE_VERSION_STRING
 # Link: target				source
