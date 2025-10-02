@@ -50,3 +50,10 @@ Install: qcs615/Qualcomm/QCS615-RIDE	cdsp	cdsp-CDSP.VT.2.2.c4-00019-SM6150-1
 Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/adsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/adsp
 Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/cdsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/cdsp
 Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/gdsp0	qcs8300/Qualcomm/IQ8275-EVK/dsp/gdsp0
+
+# IQ9075 EVK
+Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	sa8775p/Qualcomm/IQ9075-EVK/dsp/adsp
+Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp	sa8775p/Qualcomm/IQ9075-EVK/dsp/cdsp
+Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp1	sa8775p/Qualcomm/IQ9075-EVK/dsp/cdsp1
+Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	sa8775p/Qualcomm/IQ9075-EVK/dsp/gdsp0
+Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp1	sa8775p/Qualcomm/IQ9075-EVK/dsp/gdsp1
