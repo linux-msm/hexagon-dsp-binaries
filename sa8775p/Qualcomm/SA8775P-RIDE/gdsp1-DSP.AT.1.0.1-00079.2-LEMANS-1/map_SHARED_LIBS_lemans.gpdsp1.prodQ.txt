@@ -1,6 +1,0 @@
-../../build/ms/dynamic_modules/lemans.gpdsp1.prod/libsysmondomain_skel.so
-../../build/ms/dynamic_modules/lemans.gpdsp1.prod/libstabilitydomain_skel.so
-../../build/ms/dynamic_modules/lemans.gpdsp1.prod/libsysmonquery_skel.so
-../../build/ms/dynamic_modules/lemans.gpdsp1.prod/fastrpc_shell_6
-../../build/ms/dynamic_modules/lemans.gpdsp1.prod/libc++.so.1
-../../build/ms/dynamic_modules/lemans.gpdsp1.prod/libc++abi.so.1

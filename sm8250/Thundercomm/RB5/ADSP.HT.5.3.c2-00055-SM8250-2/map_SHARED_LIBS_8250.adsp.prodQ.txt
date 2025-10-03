@@ -1,5 +1,0 @@
-../../build/ms/dynamic_modules/8250.adsp.prod/libsysmon_skel.so
-../../build/ms/dynamic_modules/8250.adsp.prod/libsysmondomain_skel.so
-../../build/ms/dynamic_modules/8250.adsp.prod/libstabilitydomain_skel.so
-../../build/ms/dynamic_modules/8250.adsp.prod/libsysmonquery_skel.so
-../../build/ms/dynamic_modules/8250.adsp.prod/fastrpc_shell_0
