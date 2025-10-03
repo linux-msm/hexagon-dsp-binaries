@@ -1,1 +1,0 @@
-../../build/ms/dynamic_modules/8250.slpi.prod/libsns_direct_channel_skel.so
