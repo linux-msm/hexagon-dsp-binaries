@@ -85,21 +85,28 @@ def load_whence():
 def load_config():
     with open("config.txt", encoding="utf-8") as file:
         pattern_empty = re.compile("^#|^$")
-        pattern_data = re.compile("Install: ([^ \t]+)[ \t]+([^ \t]+)[ \t]+([^ \t]+)\n")
+        pattern_install = re.compile("Install: ([^ \t]+)[ \t]+([^ \t]+)[ \t]+([^ \t]+)\n")
+        pattern_link = re.compile("Link: ([^ \t]+)[ \t]+([^ \t]+)\n")
 
         for (lineno, line) in enumerate(file, start=1):
             if pattern_empty.match(line):
                 continue
-            match = pattern_data.match(line)
+
+            match = pattern_install.match(line)
             if match:
-                yield (lineno, match.group(1), match.group(2), match.group(3))
+                yield ("install", lineno, *match.groups())
+                continue
+
+            match = pattern_link.match(line)
+            if match:
+                yield ("link", lineno, *match.groups())
                 continue
 
             raise Exception("config.txt: %d: failed to parse '%s'" % (lineno, line[:-1]))
 
 DSPS = [ "adsp", "cdsp", "sdsp", "cdsp1", "gdsp0", "gdsp1" ]
 
-def check_config(data, dirs):
+def check_install_config(data, dirs):
     (lineno, path, dsp, subdir) = data
     ret = True
 
@@ -119,6 +126,40 @@ def check_config(data, dirs):
     if dsp not in DSPS:
         sys.stderr.write("config.txt: %d: unknown DSP type '%s'\n" % (lineno, dsp))
         ret = False
+
+    return ret
+
+def check_link_config(data):
+    (lineno, src_path, dst_path) = data
+    ret = True
+
+    if src_path.endswith("/"):
+        sys.stderr.write("config.txt: %d: trailing '/' in %s\n" % (lineno, src_path))
+        ret = False
+
+    if dst_path.endswith("/"):
+        sys.stderr.write("config.txt: %d: trailing '/' in %s\n" % (lineno, dst_path))
+        ret = False
+
+    dsp_path = os.path.dirname(src_path)
+    sourcedir = os.path.dirname(dsp_path)
+    if not os.path.exists(sourcedir):
+        sys.stderr.write("config.txt: %d: dir %s doesn't exist\n" % (lineno, sourcedir))
+        ret = False
+
+    if os.path.basename(dsp_path) != "dsp":
+        sys.stderr.write("config.txt: %d: DSP type not under 'dsp' dir %s\n" % (lineno, src_path))
+        ret = False
+
+    return ret
+
+def check_config(data, dirs):
+    ret = True
+
+    if data[0] == "install":
+       ret = check_install_config(data[1:], dirs)
+    elif data[0] == "link":
+       ret = check_link_config(data[1:])
 
     return ret
 
