@@ -186,9 +186,9 @@ Origin: https://softwarecenter.qualcomm.com/nexus/generic/software/chip/qualcomm
 
 --------------------------------------------------------------------------
 
-Dir: qcs615/Qualcomm/QCS615-RIDE/adsp-ADSP.VT.5.2.c6-00059-SM6150-1
-Dir: qcs615/Qualcomm/QCS615-RIDE/cdsp-CDSP.VT.2.2.c4-00019-SM6150-1
-Device: Qualcomm Technologies, Inc. QCS615 Ride
+Dir: qcs615/Qualcomm/QCS615-ADP-AIR/adsp-ADSP.VT.5.2.c6-00059-SM6150-1
+Dir: qcs615/Qualcomm/QCS615-ADP-AIR/cdsp-CDSP.VT.2.2.c4-00019-SM6150-1
+Device: Qualcomm Technologies, Inc. QCS615 ADP AIR
 Licence: LICENSE.qcom-2
 Status: Redistributable
 Origin: https://softwarecenter.qualcomm.com/nexus/generic/software/chip/qualcomm_linux-spf-1-0/qualcomm-linux-spf-1-0_test_device_public/r1.0_00102.0/qcs615-le-1-0/common/build/common/bin/QCS615_dspso.zip
