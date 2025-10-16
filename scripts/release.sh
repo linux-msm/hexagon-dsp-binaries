@@ -6,4 +6,4 @@ set -e
 make check
 git tag -s -m "Hexagon DSP binaries, release $1" $1
 make dist
-gpg --sign -b dist/hexagon-dsp-binaries_$1.tar.gz
+gpg --sign -b -a dist/hexagon-dsp-binaries_$1.tar.gz
