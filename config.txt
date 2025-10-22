@@ -43,8 +43,8 @@ Install: qcs8300/Qualcomm/QCS8300-RIDE	cdsp	cdsp-DSP.AT.1.0.1-00163-LEMANS-1
 Install: qcs8300/Qualcomm/QCS8300-RIDE	gdsp0	gdsp0-DSP.AT.1.0.1-00163-LEMANS-1
 
 # QCS615 RIDE
-Install: qcs615/Qualcomm/QCS615-RIDE	adsp	adsp-ADSP.VT.5.2.c6-00059-SM6150-1
-Install: qcs615/Qualcomm/QCS615-RIDE	cdsp	cdsp-CDSP.VT.2.2.c4-00019-SM6150-1
+Install: qcs615/Qualcomm/QCS615-RIDE	adsp	ADSP.VT.5.2.c6-00059-SM6150-1
+Install: qcs615/Qualcomm/QCS615-RIDE	cdsp	CDSP.VT.2.2.c4-00019-SM6150-1
 
 # IQ8275 EVK
 Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/adsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/adsp

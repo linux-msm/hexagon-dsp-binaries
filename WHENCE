@@ -186,8 +186,8 @@ Origin: https://softwarecenter.qualcomm.com/nexus/generic/software/chip/qualcomm
 
 --------------------------------------------------------------------------
 
-Dir: qcs615/Qualcomm/QCS615-RIDE/adsp-ADSP.VT.5.2.c6-00059-SM6150-1
-Dir: qcs615/Qualcomm/QCS615-RIDE/cdsp-CDSP.VT.2.2.c4-00019-SM6150-1
+Dir: qcs615/Qualcomm/QCS615-RIDE/ADSP.VT.5.2.c6-00059-SM6150-1
+Dir: qcs615/Qualcomm/QCS615-RIDE/CDSP.VT.2.2.c4-00019-SM6150-1
 Device: Qualcomm Technologies, Inc. QCS615 Ride
 Licence: LICENSE.qcom-2
 Status: Redistributable
