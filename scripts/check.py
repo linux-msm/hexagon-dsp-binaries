@@ -181,6 +181,10 @@ def check_dir(subdir):
 
     okay = True
 
+    # We alrady warned earlier
+    if not os.path.exists(subdir):
+        return False
+
     for file in os.listdir(subdir):
         fullname = os.path.join(subdir, file)
 
