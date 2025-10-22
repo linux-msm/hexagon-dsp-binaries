@@ -195,7 +195,7 @@ Origin: https://softwarecenter.qualcomm.com/nexus/generic/software/chip/qualcomm
 
 --------------------------------------------------------------------------
 
-Dir: x1e80100/Qualcomm/Hamoa-IoT-EVK/cdsp-CDSP.HT.2.9.c1-00069-HAMOA-1
+Dir: x1e80100/Qualcomm/Hamoa-IoT-EVK/CDSP.HT.2.9.c1-00069-HAMOA-1
 Device: Qualcomm Technologies, Inc. Hamoa IoT EVK
 Licence: LICENSE.qcom-2
 Status: Redistributable
