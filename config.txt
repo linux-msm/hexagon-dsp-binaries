@@ -50,13 +50,13 @@ Install: qcs615/Qualcomm/QCS615-RIDE	cdsp	CDSP.VT.2.2.c4-00019-SM6150-1
 Install: x1e80100/Qualcomm/Hamoa-IoT-EVK	cdsp	CDSP.HT.2.9.c1-00069-HAMOA-1
 
 # IQ8275 EVK
-Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/adsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/adsp
-Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/cdsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/cdsp
-Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/gdsp0	qcs8300/Qualcomm/IQ8275-EVK/dsp/gdsp0
+Copy: qcs8300/Qualcomm/QCS8300-RIDE/dsp/adsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/adsp
+Copy: qcs8300/Qualcomm/QCS8300-RIDE/dsp/cdsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/cdsp
+Copy: qcs8300/Qualcomm/QCS8300-RIDE/dsp/gdsp0	qcs8300/Qualcomm/IQ8275-EVK/dsp/gdsp0
 
 # IQ9075 EVK
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	sa8775p/Qualcomm/IQ9075-EVK/dsp/adsp
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp	sa8775p/Qualcomm/IQ9075-EVK/dsp/cdsp
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp1	sa8775p/Qualcomm/IQ9075-EVK/dsp/cdsp1
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	sa8775p/Qualcomm/IQ9075-EVK/dsp/gdsp0
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp1	sa8775p/Qualcomm/IQ9075-EVK/dsp/gdsp1
+Copy: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	sa8775p/Qualcomm/IQ9075-EVK/dsp/adsp
+Copy: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp	sa8775p/Qualcomm/IQ9075-EVK/dsp/cdsp
+Copy: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp1	sa8775p/Qualcomm/IQ9075-EVK/dsp/cdsp1
+Copy: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	sa8775p/Qualcomm/IQ9075-EVK/dsp/gdsp0
+Copy: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp1	sa8775p/Qualcomm/IQ9075-EVK/dsp/gdsp1
