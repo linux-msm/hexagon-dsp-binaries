@@ -87,6 +87,7 @@ def load_config():
         pattern_empty = re.compile("^#|^$")
         pattern_install = re.compile("Install: ([^ \t]+)[ \t]+([^ \t]+)[ \t]+([^ \t]+)\n")
         pattern_link = re.compile("Link: ([^ \t]+)[ \t]+([^ \t]+)\n")
+        pattern_copy = re.compile("Copy: ([^ \t]+)[ \t]+([^ \t]+)\n")
 
         for (lineno, line) in enumerate(file, start=1):
             if pattern_empty.match(line):
@@ -100,6 +101,11 @@ def load_config():
             match = pattern_link.match(line)
             if match:
                 yield ("link", lineno, *match.groups())
+                continue
+
+            match = pattern_copy.match(line)
+            if match:
+                yield ("copy", lineno, *match.groups())
                 continue
 
             raise Exception("config.txt: %d: failed to parse '%s'" % (lineno, line[:-1]))
@@ -159,6 +165,8 @@ def check_config(data, dirs):
     if data[0] == "install":
        ret = check_install_config(data[1:], dirs)
     elif data[0] == "link":
+       ret = check_link_config(data[1:])
+    elif data[0] == "copy":
        ret = check_link_config(data[1:])
 
     return ret
