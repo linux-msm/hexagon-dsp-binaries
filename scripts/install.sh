@@ -66,6 +66,16 @@ do_link() {
 	ln -sr -T "${target}" "${link}"
 }
 
+# dest target copy
+do_copy() {
+	local target="$1/$2"
+	local copy="$1/$3"
+
+	mkdir -p "`dirname "${copy}"`"
+	rm -rf "${copy}"
+	cp -a "${target}" "${copy}"
+}
+
 grep -v '^#\|^$' "${CFG}" | while read verb rest
 do
 	case ${verb} in
@@ -74,6 +84,9 @@ do
 		;;
 	"Link:" )
 		do_link ${DST} ${rest}
+		;;
+	"Copy:" )
+		do_copy ${DST} ${rest}
 		;;
 	* )
 		echo "Unsupported clause ${verb}" >&2
