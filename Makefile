@@ -10,6 +10,7 @@ clean:
 
 install:
 	./scripts/install.sh config.txt ${DESTDIR}/${DSPDIR}
+	install -D -m 0644 00-hexagon-dsp-binaries.yaml ${DESTDIR}/${DSPDIR}/conf.d/00-hexagon-dsp-binaries.yaml
 
 TAG = $(shell git describe)
 NAME = hexagon-dsp-binaries
