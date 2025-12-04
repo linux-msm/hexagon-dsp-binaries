@@ -47,6 +47,7 @@ Install: qcs615/Qualcomm/QCS615-RIDE	adsp	ADSP.VT.5.2.c6-00059-SM6150-1
 Install: qcs615/Qualcomm/QCS615-RIDE	cdsp	CDSP.VT.2.2.c4-00019-SM6150-1
 
 # Hamoa IoT EVK
+Install: x1e80100/Qualcomm/Hamoa-IoT-EVK	adsp	ADSP.HT.5.9-00828-HAMOA-1
 Install: x1e80100/Qualcomm/Hamoa-IoT-EVK	cdsp	CDSP.HT.2.9.c1-00069-HAMOA-1
 
 # IQ8275 EVK

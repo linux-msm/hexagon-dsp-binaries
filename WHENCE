@@ -194,7 +194,7 @@ Status: Redistributable
 Origin: https://softwarecenter.qualcomm.com/nexus/generic/software/chip/qualcomm_linux-spf-1-0/qualcomm-linux-spf-1-0_test_device_public/r1.0_00102.0/qcs615-le-1-0/common/build/common/bin/QCS615_dspso.zip
 
 --------------------------------------------------------------------------
-
+Dir: x1e80100/Qualcomm/Hamoa-IoT-EVK/ADSP.HT.5.9-00828-HAMOA-1
 Dir: x1e80100/Qualcomm/Hamoa-IoT-EVK/CDSP.HT.2.9.c1-00069-HAMOA-1
 Device: Qualcomm Technologies, Inc. Hamoa IoT EVK
 Licence: LICENSE.qcom-2
