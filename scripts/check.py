@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2024-2025 Linaro Ltd.
 
-import os, re, sys
+import os, re, sys, yaml
 
 def empty_data():
     return {'dirs': {}}
@@ -175,6 +175,60 @@ def list_git():
     if git.close():
         sys.stderr.write("WHENCE: skipped contents validation, git file listing failed\n")
 
+def load_machine_dsp_paths():
+    """Load and parse 00-hexagon-dsp-binaries.yaml to get valid DSP library paths."""
+    try:
+        with open("00-hexagon-dsp-binaries.yaml", encoding="utf-8") as file:
+            data = yaml.safe_load(file)
+            if not data or 'machines' not in data:
+                return set()
+
+            # Extract base paths (without /dsp suffix) from DSP_LIBRARY_PATH
+            paths = set()
+            for machine_name, machine_data in data['machines'].items():
+                if 'DSP_LIBRARY_PATH' in machine_data:
+                    dsp_path = machine_data['DSP_LIBRARY_PATH']
+                    # Remove /dsp suffix to get base path
+                    if dsp_path.endswith('/dsp'):
+                        base_path = dsp_path[:-4]
+                        paths.add(base_path)
+            return paths
+    except FileNotFoundError:
+        sys.stderr.write("Warning: 00-hexagon-dsp-binaries.yaml not found, skipping path consistency check\n")
+        return None
+    except Exception as e:
+        sys.stderr.write("Error loading 00-hexagon-dsp-binaries.yaml: %s\n" % e)
+        return None
+
+def check_config_against_machine_paths(config_data, machine_paths):
+    """Check that config.txt paths are consistent with 00-hexagon-dsp-binaries.yaml."""
+    if machine_paths is None:
+        return True
+
+    ret = True
+    reported_paths = set()  # Track paths we've already reported as missing
+
+    for data in config_data:
+        if data[0] == "install":
+            (lineno, path, dsp, subdir) = data[1:]
+            if path not in machine_paths and path not in reported_paths:
+                sys.stderr.write("config.txt: %d: Install path '%s' not found in 00-hexagon-dsp-binaries.yaml\n" % (lineno, path))
+                reported_paths.add(path)
+                ret = False
+        elif data[0] == "link":
+            (lineno, src_path, dst_path) = data[1:]
+            # Extract base path from link target (dst_path)
+            # Link format: path/to/device/dsp/dsptype
+            parts = dst_path.split('/')
+            if len(parts) >= 2 and parts[-2] == 'dsp':
+                base_path = '/'.join(parts[:-2])
+                if base_path not in machine_paths and base_path not in reported_paths:
+                    sys.stderr.write("config.txt: %d: Link target base path '%s' not found in 00-hexagon-dsp-binaries.yaml\n" % (lineno, base_path))
+                    reported_paths.add(base_path)
+                    ret = False
+
+    return ret
+
 def check_dir(subdir):
     pattern_shell = re.compile("^fastrpc_shell(_unsigned)?_[0-9]$")
     pattern_library = re.compile("^[-_+0-9a-zA-Z]*\\.so(\\.[0-9]*)?$")
@@ -212,7 +266,7 @@ def main():
         if 'licence' in data:
             licences[data['licence'][0]] = None
 
-    known_files = ['config.txt', 'Makefile', 'TODO', 'README.md', 'WHENCE']
+    known_files = ['config.txt', 'Makefile', 'TODO', 'README.md', 'WHENCE', '00-hexagon-dsp-binaries.yaml']
 
     for file in list_git():
         if os.path.dirname(file) in dirs:
@@ -233,13 +287,23 @@ def main():
         sys.stderr.write("WHENCE: file %s is not under a listed directory\n" % file)
         okay = False
 
+    # Load 00-hexagon-dsp-binaries.yaml for consistency checking
+    machine_paths = load_machine_dsp_paths()
+
+    # Collect config data for consistency check
+    config_data = []
     try:
         for data in load_config():
+            config_data.append(data)
             if not check_config(data, dirs):
                 okay = False
 
     except Exception as e:
         sys.stderr.write("%s\n" % e)
+        okay = False
+
+    # Check config.txt paths against 00-hexagon-dsp-binaries.yaml
+    if not check_config_against_machine_paths(config_data, machine_paths):
         okay = False
 
     for entry in dirs.keys():
