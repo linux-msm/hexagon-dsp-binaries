@@ -118,6 +118,14 @@ Licence: LICENSE.qcom
 Status: Redistributable
 Origin: https://qartifactory-edge.qualcomm.com/ui/native/qsc_releases/software/chip/qualcomm_linux-spf-1-0/qualcomm-linux-spf-1-0_test_device_public/r1.0_00095.0/qcm6490-le-1-0/common/build/ufs/bin/QCM6490_dspso.zip
 
+-------------------------------------------------------------------------
+
+Dir: qcm6490/Thundercomm/RB3gen2/CDSP.HT.2.5.c3-00130-KODIAK-1
+Device: Thundercomm / Qualcomm Robotics RB3Gen2 Platform
+Licence: LICENSE.qcom
+Status: Redistributable
+Origin: https://qartifactory-edge.qualcomm.com/ui/native/qsc_releases/software/chip/qualcomm_linux-spf-1-0/qualcomm-linux-spf-1-0_test_device_public/r1.0_00112.0/qcm6490-le-1-0/common/build/ufs/bin/QCM6490_dspso.zip
+
 --------------------------------------------------------------------------
 
 Dir: sa8775p/Qualcomm/SA8775P-RIDE/adsp-DSP.AT.1.0.1-00079.2-LEMANS-1
