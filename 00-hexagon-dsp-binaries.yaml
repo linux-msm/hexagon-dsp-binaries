@@ -25,5 +25,7 @@ machines:
     DSP_LIBRARY_PATH: "qcm6490/Thundercomm/RB3gen2/dsp"
   "Qualcomm Technologies, Inc. Robotics RB5":
     DSP_LIBRARY_PATH: "sm8250/Thundercomm/RB5/dsp"
+  "Qualcomm Technologies, Inc. SM8750 MTP":
+    DSP_LIBRARY_PATH: "sm8750/Qualcomm/SM8750-MTP/dsp"    
   "Thundercomm Dragonboard 845c":
     DSP_LIBRARY_PATH: "sdm845/Thundercomm/db845c/dsp"
