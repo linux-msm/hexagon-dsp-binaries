@@ -208,3 +208,11 @@ Device: Qualcomm Technologies, Inc. Hamoa IoT EVK
 Licence: LICENSE.qcom-2
 Status: Redistributable
 Origin: https://softwarecenter.qualcomm.com/nexus/generic/software/chip/ubuntu_qualcomm_iot-spf-1-0/ubuntu-qualcomm-iot-spf-1-0_test_device_public/r1.0_00001.0/hamoa_iot-ubun-1-0/HAMOA_fw.zip
+
+
+--------------------------------------------------------------------------
+Dir: sm8750/Qualcomm/SM8750-MTP/LPAIDSP.HT.1.2.c1-00379-PAKALA-1
+Dir: sm8750/Qualcomm/SM8750-MTP/CDSP.HT.3.1-00883-PAKALA-1
+Device: Qualcomm Technologies, Inc. SM8750 MTP
+Licence: LICENSE.qcom-2
+Status: Redistributable
