@@ -54,6 +54,10 @@ Install: x1e80100/Qualcomm/Hamoa-IoT-EVK	cdsp	CDSP.HT.2.9.c1-00069-HAMOA-1
 Install: sm8750/Qualcomm/SM8750-MTP	adsp	LPAIDSP.HT.1.2.c1-00379-PAKALA-1
 Install: sm8750/Qualcomm/SM8750-MTP	cdsp	CDSP.HT.3.1-00883-PAKALA-1
 
+# KAANAPALI MTP
+Install: kaanapali/Qualcomm/Kaanapali-MTP	adsp	LPAIDSP.HT.1.6-00223-KAANAPALI-1
+Install: kaanapali/Qualcomm/Kaanapali-MTP	cdsp	CDSP.HT.3.2-00726.1-KAANAPALI-1
+
 # IQ8275 EVK
 Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/adsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/adsp
 Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/cdsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/cdsp
