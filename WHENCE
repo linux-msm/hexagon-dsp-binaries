@@ -128,6 +128,12 @@ Origin: https://qartifactory-edge.qualcomm.com/ui/native/qsc_releases/software/c
 
 --------------------------------------------------------------------------
 
+Dir: qcm6490/Thundercomm/RB3gen2/ADSP.HT.5.5.c8-00246-KODIAK-1
+Device: Thundercomm / Qualcomm Robotics RB3Gen2 Platform
+Licence: LICENSE.qcom
+Status: Redistributable
+
+--------------------------------------------------------------------------
 Dir: sa8775p/Qualcomm/SA8775P-RIDE/adsp-DSP.AT.1.0.1-00079.2-LEMANS-1
 Dir: sa8775p/Qualcomm/SA8775P-RIDE/cdsp-DSP.AT.1.0.1-00079.2-LEMANS-1
 Dir: sa8775p/Qualcomm/SA8775P-RIDE/cdsp1-DSP.AT.1.0.1-00079.2-LEMANS-1
