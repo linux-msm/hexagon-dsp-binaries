@@ -55,4 +55,6 @@ done
 
 cp -r scripts/ Makefile config.txt ${DST}
 
+cp -r *.yaml ${DST}
+
 ./scripts/filter_whence.py config.txt WHENCE ${DST}/WHENCE
