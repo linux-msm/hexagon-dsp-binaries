@@ -14,6 +14,10 @@ Install: sdm845/Thundercomm/db845c	adsp	ADSP.HT.4.0-00593-SDM845-1
 Install: sdm845/Thundercomm/db845c	cdsp	CDSP.HT.1.0-00559-SDM845-1
 Install: sdm845/Thundercomm/db845c	sdsp	SLPI.HY.1.0-00365-SDM845AZL-1
 
+# SDM845-HDK uses RB3 firmware (from linux-firmware) for adsp and cdsp
+Link: sdm845/Thundercomm/db845c/dsp/adsp	sdm845/Qualcomm/SDM845-HDK/dsp/adsp
+Link: sdm845/Thundercomm/db845c/dsp/cdsp	sdm845/Qualcomm/SDM845-HDK/dsp/cdsp
+
 # RB5
 Install: sm8250/Thundercomm/RB5		adsp	ADSP.HT.5.3.c2-00082-SM8250-1
 Install: sm8250/Thundercomm/RB5		cdsp	CDSP.HT.2.3.c1-00076-SM8250-1

@@ -24,6 +24,8 @@ machines:
     DSP_LIBRARY_PATH: "qcs8300/Qualcomm/QCS8300-RIDE/dsp"
   "Qualcomm Technologies, Inc. QRB4210 RB2":
     DSP_LIBRARY_PATH: "qrb4210/Thundercomm/RB2/dsp"
+  "Qualcomm Technologies, Inc. SDM845 HDK":
+    DSP_LIBRARY_PATH: "sdm845/Qualcomm/SDM845-HDK/dsp"
   "Qualcomm Technologies, Inc. Robotics RB1":
     DSP_LIBRARY_PATH: "qcm2290/Thundercomm/RB1/dsp"
   "Qualcomm Technologies, Inc. Robotics RB3gen2":
