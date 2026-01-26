@@ -34,5 +34,7 @@ machines:
     DSP_LIBRARY_PATH: "sm8250/Thundercomm/RB5/dsp"
   "Qualcomm Technologies, Inc. SM8750 MTP":
     DSP_LIBRARY_PATH: "sm8750/Qualcomm/SM8750-MTP/dsp"    
+  "Radxa Dragon Q6A":
+    DSP_LIBRARY_PATH: "qcs6490/radxa/dragon-q6a/dsp"    
   "Thundercomm Dragonboard 845c":
     DSP_LIBRARY_PATH: "sdm845/Thundercomm/db845c/dsp"

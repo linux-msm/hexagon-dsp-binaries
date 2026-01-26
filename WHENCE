@@ -134,6 +134,13 @@ Licence: LICENSE.qcom
 Status: Redistributable
 
 --------------------------------------------------------------------------
+Dir: qcs6490/radxa/dragon-q6a/ADSP.HT.5.5.c9-00028-KODIAK-2
+Dir: qcs6490/radxa/dragon-q6a/CDSP.HT.2.5.c4-00004-KODIAK-1
+Device: Radxa Dragon Q6A
+Licence: LICENSE.qcom
+Status: Redistributable
+
+--------------------------------------------------------------------------
 Dir: sa8775p/Qualcomm/SA8775P-RIDE/adsp-DSP.AT.1.0.1-00079.2-LEMANS-1
 Dir: sa8775p/Qualcomm/SA8775P-RIDE/cdsp-DSP.AT.1.0.1-00079.2-LEMANS-1
 Dir: sa8775p/Qualcomm/SA8775P-RIDE/cdsp1-DSP.AT.1.0.1-00079.2-LEMANS-1
