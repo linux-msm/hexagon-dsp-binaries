@@ -16,6 +16,10 @@ machines:
     DSP_LIBRARY_PATH: "kaanapali/Qualcomm/Kaanapali-MTP/dsp"
   "Qualcomm Technologies, Inc. Lemans EVK":
     DSP_LIBRARY_PATH: "sa8775p/Qualcomm/IQ9075-EVK/dsp"
+  "Qualcomm Technologies, Inc. Lemans Ride":
+    DSP_LIBRARY_PATH: "sa8775p/Qualcomm/SA8775P-RIDE/dsp"
+  "Qualcomm Technologies, Inc. Lemans Ride Rev3":
+    DSP_LIBRARY_PATH: "sa8775p/Qualcomm/SA8775P-RIDE/dsp"
   "Qualcomm Technologies, Inc. Monaco EVK":
     DSP_LIBRARY_PATH: "qcs8300/Qualcomm/IQ8275-EVK/dsp"
   "Qualcomm Technologies, Inc. QCS615 Ride (IQ-615 Beta EVK)":
