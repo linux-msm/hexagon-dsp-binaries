@@ -165,7 +165,7 @@ def check_config(data, dirs):
 
 def list_git():
     if not os.path.exists(".git"):
-        sys.stderr.write("Skipping git ls-files check, no .git dir")
+        sys.stderr.write("Skipping git ls-files check, no .git dir\n")
         return None
 
     git = os.popen("git ls-files")
