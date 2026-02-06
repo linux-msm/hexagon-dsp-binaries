@@ -10,6 +10,8 @@ machines:
     DSP_LIBRARY_PATH: "sa8775p/Qualcomm/SA8775P-RIDE/dsp"
   "Qualcomm Technologies, Inc. DB820c":
     DSP_LIBRARY_PATH: "apq8096/Qualcomm/db820c/dsp"
+  "Qualcomm Technologies, Inc. Glymur CRD":
+    DSP_LIBRARY_PATH: "glymur/Qualcomm/Glymur-CRD/dsp"
   "Qualcomm Technologies, Inc. Hamoa IoT EVK":
     DSP_LIBRARY_PATH: "x1e80100/Qualcomm/Hamoa-IoT-EVK/dsp"
   "Qualcomm Technologies, Inc. Kaanapali MTP":

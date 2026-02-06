@@ -256,3 +256,10 @@ Dir: kaanapali/Qualcomm/Kaanapali-MTP/CDSP.HT.3.2-00726.1-KAANAPALI-1
 Device: Qualcomm Technologies, Inc. Kaanapali MTP
 Licence: LICENSE.qcom-2
 Status: Redistributable
+
+-------------------------------------------------------------------------
+Dir: glymur/Qualcomm/Glymur-CRD/LPAIDSP.HT.1.6.c1-00007-GLYMUR-3
+Dir: glymur/Qualcomm/Glymur-CRD/CDSP.HT.3.3-00302-GLYMUR-1
+Device: Qualcomm Technologies, Inc. Glymur CRD
+Licence: LICENSE.qcom-2
+Status: Redistributable
