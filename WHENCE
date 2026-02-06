@@ -141,6 +141,13 @@ Licence: LICENSE.qcom
 Status: Redistributable
 
 --------------------------------------------------------------------------
+
+Dir: qcs6490/Thundercomm/RubikPi3/ADSP.HT.5.5.c8-00217-KODIAK-1
+Device: Thundercomm RUBIK Pi 3
+Licence: LICENSE.qcom
+Status: Redistributable
+
+--------------------------------------------------------------------------
 Dir: sa8775p/Qualcomm/SA8775P-RIDE/adsp-DSP.AT.1.0.1-00079.2-LEMANS-1
 Dir: sa8775p/Qualcomm/SA8775P-RIDE/cdsp-DSP.AT.1.0.1-00079.2-LEMANS-1
 Dir: sa8775p/Qualcomm/SA8775P-RIDE/cdsp1-DSP.AT.1.0.1-00079.2-LEMANS-1

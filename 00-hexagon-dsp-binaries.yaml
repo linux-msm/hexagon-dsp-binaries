@@ -44,3 +44,5 @@ machines:
     DSP_LIBRARY_PATH: "qcs6490/radxa/dragon-q6a/dsp"    
   "Thundercomm Dragonboard 845c":
     DSP_LIBRARY_PATH: "sdm845/Thundercomm/db845c/dsp"
+  "Thundercomm RUBIK Pi 3":
+    DSP_LIBRARY_PATH: "qcs6490/Thundercomm/RubikPi3/dsp"
