@@ -4,6 +4,8 @@
 # Machine entries are sorted alphabetically by machine name (key)
 # This sorting order ensures maintainability and stability as new properties are added
 machines:
+  "Qualcomm QCS615 IQ 615 EVK":
+    DSP_LIBRARY_PATH: "qcs615/Qualcomm/QCS615-RIDE/dsp"
   "Qualcomm SA8775P Ride":
     DSP_LIBRARY_PATH: "sa8775p/Qualcomm/SA8775P-RIDE/dsp"
   "Qualcomm SA8775P Ride Rev3":
