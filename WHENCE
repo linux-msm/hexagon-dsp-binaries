@@ -245,6 +245,15 @@ Status: Redistributable
 
 --------------------------------------------------------------------------
 
+Dir: qcs8300/Qualcomm/QCS8300-RIDE/adsp-DSP.AT.1.0.1-00196-LEMANS-2
+Dir: qcs8300/Qualcomm/QCS8300-RIDE/cdsp-DSP.AT.1.0.1-00196-LEMANS-2
+Dir: qcs8300/Qualcomm/QCS8300-RIDE/gdsp0-DSP.AT.1.0.1-00196-LEMANS-2
+Device: Qualcomm Technologies, Inc. QCS8300 Ride
+Licence: LICENSE.qcom-2
+Status: Redistributable
+
+--------------------------------------------------------------------------
+
 Dir: qcs615/Qualcomm/QCS615-RIDE/ADSP.VT.5.2.c6-00059-SM6150-1
 Dir: qcs615/Qualcomm/QCS615-RIDE/CDSP.VT.2.2.c4-00019-SM6150-1
 Device: Qualcomm Technologies, Inc. QCS615 Ride
