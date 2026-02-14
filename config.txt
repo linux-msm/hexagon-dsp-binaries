@@ -50,9 +50,9 @@ Install: sa8775p/Qualcomm/SA8775P-RIDE	gdsp0	gdsp0-DSP.AT.1.0.1-00196-LEMANS-2
 Install: sa8775p/Qualcomm/SA8775P-RIDE	gdsp1	gdsp1-DSP.AT.1.0.1-00196-LEMANS-2
 
 # QCS8300 RIDE
-Install: qcs8300/Qualcomm/QCS8300-RIDE	adsp	adsp-DSP.AT.1.0.1-00170-LEMANS-1
-Install: qcs8300/Qualcomm/QCS8300-RIDE	cdsp	cdsp-DSP.AT.1.0.1-00170-LEMANS-1
-Install: qcs8300/Qualcomm/QCS8300-RIDE	gdsp0	gdsp0-DSP.AT.1.0.1-00170-LEMANS-1
+Install: qcs8300/Qualcomm/QCS8300-RIDE	adsp	adsp-DSP.AT.1.0.1-00196-LEMANS-2
+Install: qcs8300/Qualcomm/QCS8300-RIDE	cdsp	cdsp-DSP.AT.1.0.1-00196-LEMANS-2
+Install: qcs8300/Qualcomm/QCS8300-RIDE	gdsp0	gdsp0-DSP.AT.1.0.1-00196-LEMANS-2
 
 # QCS615 RIDE
 Install: qcs615/Qualcomm/QCS615-RIDE	adsp	ADSP.VT.5.2.c6-00059-SM6150-1
