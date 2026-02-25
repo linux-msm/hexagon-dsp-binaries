@@ -20,9 +20,10 @@ dist:
 	$-rm -rf release
 	@mkdir -p release dist
 	./scripts/dist.sh config.txt release/$(SUBDIR)
+	tar -czf release/$(TARGET) -C release $(SUBDIR)
 	$(MAKE) -C release/$(SUBDIR) check
-	$(MAKE) -C release/$(SUBDIR) install DESTDIR=release/test-install-$(TAG)
-	tar -czf dist/$(TARGET) -C release $(SUBDIR)
+	$(MAKE) -C release/$(SUBDIR) install DESTDIR=$(CURDIR)/release/test-install-$(TAG)
+	mv release/$(TARGET) dist/$(TARGET)
 	@echo "Created dist/$(TARGET)"
 	@rm -rf release
 
