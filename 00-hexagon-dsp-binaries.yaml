@@ -4,6 +4,8 @@
 # Machine entries are sorted alphabetically by machine name (key)
 # This sorting order ensures maintainability and stability as new properties are added
 machines:
+  "Arduino Monza":
+    DSP_LIBRARY_PATH: "qcs8300/Arduino/Monza/dsp"
   "Qualcomm QCS615 IQ 615 EVK":
     DSP_LIBRARY_PATH: "qcs615/Qualcomm/QCS615-RIDE/dsp"
   "Qualcomm SA8775P Ride":
