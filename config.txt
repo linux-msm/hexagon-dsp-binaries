@@ -63,8 +63,8 @@ Install: x1e80100/Qualcomm/Hamoa-IoT-EVK	adsp	ADSP.HT.5.9-00828-HAMOA-1
 Install: x1e80100/Qualcomm/Hamoa-IoT-EVK	cdsp	CDSP.HT.2.9.c1-00069-HAMOA-1
 
 # SM8750 MTP
-Install: sm8750/Qualcomm/SM8750-MTP	adsp	LPAIDSP.HT.1.2.c1-00379-PAKALA-1
-Install: sm8750/Qualcomm/SM8750-MTP	cdsp	CDSP.HT.3.1-00883-PAKALA-1
+Install: sm8750/Qualcomm/SM8750-MTP	adsp	LPAIDSP.HT.1.2.c1-00450-PAKALA-2
+Install: sm8750/Qualcomm/SM8750-MTP	cdsp	CDSP.HT.3.1-00889-PAKALA-1
 
 # KAANAPALI MTP
 Install: kaanapali/Qualcomm/Kaanapali-MTP	adsp	LPAIDSP.HT.1.6-00223-KAANAPALI-1
