@@ -232,6 +232,7 @@ def check_config_against_machine_paths(config_data, machine_paths):
 def check_dir(subdir):
     pattern_shell = re.compile("^fastrpc_shell(_unsigned)?_[0-9]$")
     pattern_library = re.compile("^[-_+0-9a-zA-Z]*\\.so(\\.[0-9]*)?$")
+    pattern_notice = re.compile(r"^notice\.txt$", re.IGNORECASE)
 
     okay = True
 
@@ -245,6 +246,10 @@ def check_dir(subdir):
         if not os.path.isfile(fullname):
             sys.stderr.write("WHENCE: not a file %s\n" % fullname)
             okay = False
+            continue
+
+        if pattern_notice.match(file):
+           continue
 
         if not pattern_shell.match(file) and \
            not pattern_library.match(file):
