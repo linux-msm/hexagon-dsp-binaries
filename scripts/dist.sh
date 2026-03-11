@@ -53,8 +53,6 @@ do
 	[ -r "${DST}/$licence" ] || install -m 0644 $licence "${DST}"
 done
 
-cp -r scripts/ Makefile config.txt ${DST}
-
-cp -r *.yaml ${DST}
+cp -r conf.d scripts/ Makefile config.txt ${DST}
 
 ./scripts/filter_whence.py config.txt WHENCE ${DST}/WHENCE
