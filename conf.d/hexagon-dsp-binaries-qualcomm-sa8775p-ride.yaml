@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+machines:
+  Qualcomm SA8775P Ride:
+    DSP_LIBRARY_PATH: sa8775p/Qualcomm/SA8775P-RIDE/dsp
+  Qualcomm SA8775P Ride Rev3:
+    DSP_LIBRARY_PATH: sa8775p/Qualcomm/SA8775P-RIDE/dsp
+  Qualcomm Technologies, Inc. Lemans Ride:
+    DSP_LIBRARY_PATH: sa8775p/Qualcomm/SA8775P-RIDE/dsp
+  Qualcomm Technologies, Inc. Lemans Ride Rev3:
+    DSP_LIBRARY_PATH: sa8775p/Qualcomm/SA8775P-RIDE/dsp
