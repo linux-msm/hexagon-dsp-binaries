@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+machines:
+  Qualcomm Technologies, Inc. QRB4210 RB2:
+    DSP_LIBRARY_PATH: qrb4210/Thundercomm/RB2/dsp

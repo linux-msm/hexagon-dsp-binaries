@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+machines:
+  Radxa Dragon Q6A:
+    DSP_LIBRARY_PATH: qcs6490/radxa/dragon-q6a/dsp

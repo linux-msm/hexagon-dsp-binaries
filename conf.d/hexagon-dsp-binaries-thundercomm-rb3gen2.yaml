@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+machines:
+  Qualcomm Technologies, Inc. Robotics RB3gen2:
+    DSP_LIBRARY_PATH: qcm6490/Thundercomm/RB3gen2/dsp

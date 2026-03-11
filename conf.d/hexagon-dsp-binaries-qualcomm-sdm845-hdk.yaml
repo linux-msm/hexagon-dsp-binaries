@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+machines:
+  Qualcomm Technologies, Inc. SDM845 HDK:
+    DSP_LIBRARY_PATH: sdm845/Qualcomm/SDM845-HDK/dsp
