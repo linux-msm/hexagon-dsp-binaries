@@ -292,6 +292,12 @@ Licence: LICENSE.qcom-2
 Status: Redistributable
 
 --------------------------------------------------------------------------
+Dir: sm8750/Qualcomm/SM8750-MTP/LPAIDSP.HT.1.1.c3-00018-PAKALA-3
+Device: Qualcomm Technologies, Inc. SM8750 MTP
+Licence: LICENSE.qcom-2
+Status: Redistributable
+
+--------------------------------------------------------------------------
 Dir: kaanapali/Qualcomm/Kaanapali-MTP/LPAIDSP.HT.1.6-00223-KAANAPALI-1
 Dir: kaanapali/Qualcomm/Kaanapali-MTP/CDSP.HT.3.2-00726.1-KAANAPALI-1
 Device: Qualcomm Technologies, Inc. Kaanapali MTP
