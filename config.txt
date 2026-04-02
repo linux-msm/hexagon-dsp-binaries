@@ -72,7 +72,7 @@ Install: kaanapali/Qualcomm/Kaanapali-MTP	cdsp	CDSP.HT.3.2-00726.1-KAANAPALI-1
 
 # Glymur CRD
 Install: glymur/Qualcomm/Glymur-CRD	adsp	LPAIDSP.HT.1.6.c1-00007-GLYMUR-3
-Install: glymur/Qualcomm/Glymur-CRD	cdsp	CDSP.HT.3.3-00302-GLYMUR-1
+Install: glymur/Qualcomm/Glymur-CRD	cdsp	CDSP.HT.3.3-00311-GLYMUR-1
 
 # Arduino Monza
 Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/adsp	qcs8300/Arduino/Monza/dsp/adsp

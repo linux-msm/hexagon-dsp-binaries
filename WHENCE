@@ -304,3 +304,9 @@ Dir: glymur/Qualcomm/Glymur-CRD/CDSP.HT.3.3-00302-GLYMUR-1
 Device: Qualcomm Technologies, Inc. Glymur CRD
 Licence: LICENSE.qcom-2
 Status: Redistributable
+
+-------------------------------------------------------------------------
+Dir: glymur/Qualcomm/Glymur-CRD/CDSP.HT.3.3-00311-GLYMUR-1
+Device: Qualcomm Technologies, Inc. Glymur CRD
+Licence: LICENSE.qcom-2
+Status: Redistributable
