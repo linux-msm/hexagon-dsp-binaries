@@ -63,7 +63,7 @@ Install: x1e80100/Qualcomm/Hamoa-IoT-EVK	adsp	ADSP.HT.5.9-00828-HAMOA-1
 Install: x1e80100/Qualcomm/Hamoa-IoT-EVK	cdsp	CDSP.HT.2.9.c1-00069-HAMOA-1
 
 # SM8750 MTP
-Install: sm8750/Qualcomm/SM8750-MTP	adsp	LPAIDSP.HT.1.2.c1-00450-PAKALA-2
+Install: sm8750/Qualcomm/SM8750-MTP	adsp	LPAIDSP.HT.1.2.c2-00001-PAKALA-1
 Install: sm8750/Qualcomm/SM8750-MTP	cdsp	CDSP.HT.3.1-00889-PAKALA-1
 
 # KAANAPALI MTP
@@ -72,7 +72,7 @@ Install: kaanapali/Qualcomm/Kaanapali-MTP	cdsp	CDSP.HT.3.2-00726.1-KAANAPALI-1
 
 # Glymur CRD
 Install: glymur/Qualcomm/Glymur-CRD	adsp	LPAIDSP.HT.1.6.c1-00007-GLYMUR-3
-Install: glymur/Qualcomm/Glymur-CRD	cdsp	CDSP.HT.3.3-00302-GLYMUR-1
+Install: glymur/Qualcomm/Glymur-CRD	cdsp	CDSP.HT.3.3-00311-GLYMUR-1
 
 # Arduino Monza
 Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/adsp	qcs8300/Arduino/Monza/dsp/adsp

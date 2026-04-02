@@ -292,6 +292,11 @@ Licence: LICENSE.qcom-2
 Status: Redistributable
 
 --------------------------------------------------------------------------
+Dir: sm8750/Qualcomm/SM8750-MTP/LPAIDSP.HT.1.2.c2-00001-PAKALA-1
+Device: Qualcomm Technologies, Inc. SM8750 MTP
+Licence: LICENSE.qcom-2
+Status: Redistributable
+--------------------------------------------------------------------------
 Dir: kaanapali/Qualcomm/Kaanapali-MTP/LPAIDSP.HT.1.6-00223-KAANAPALI-1
 Dir: kaanapali/Qualcomm/Kaanapali-MTP/CDSP.HT.3.2-00726.1-KAANAPALI-1
 Device: Qualcomm Technologies, Inc. Kaanapali MTP
@@ -301,6 +306,12 @@ Status: Redistributable
 -------------------------------------------------------------------------
 Dir: glymur/Qualcomm/Glymur-CRD/LPAIDSP.HT.1.6.c1-00007-GLYMUR-3
 Dir: glymur/Qualcomm/Glymur-CRD/CDSP.HT.3.3-00302-GLYMUR-1
+Device: Qualcomm Technologies, Inc. Glymur CRD
+Licence: LICENSE.qcom-2
+Status: Redistributable
+
+-------------------------------------------------------------------------
+Dir: glymur/Qualcomm/Glymur-CRD/CDSP.HT.3.3-00311-GLYMUR-1
 Device: Qualcomm Technologies, Inc. Glymur CRD
 Licence: LICENSE.qcom-2
 Status: Redistributable
