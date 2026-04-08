@@ -90,3 +90,7 @@ Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp	sa8775p/Qualcomm/IQ9075-EVK/dsp/cds
 Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp1	sa8775p/Qualcomm/IQ9075-EVK/dsp/cdsp1
 Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	sa8775p/Qualcomm/IQ9075-EVK/dsp/gdsp0
 Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp1	sa8775p/Qualcomm/IQ9075-EVK/dsp/gdsp1
+
+# Purwa IoT EVK
+Link: x1e80100/Qualcomm/Hamoa-IoT-EVK/dsp/adsp	x1p42100/Qualcomm/Purwa-IoT-EVK/dsp/adsp
+Link: x1e80100/Qualcomm/Hamoa-IoT-EVK/dsp/cdsp	x1p42100/Qualcomm/Purwa-IoT-EVK/dsp/cdsp
