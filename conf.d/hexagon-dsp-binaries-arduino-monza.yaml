@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 machines:
-  Arduino Monza:
+  Arduino VENTUNO Q:
     DSP_LIBRARY_PATH: qcs8300/Arduino/Monza/dsp
