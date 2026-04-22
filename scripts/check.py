@@ -1,6 +1,8 @@
 #! /usr/bin/python3
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2024-2025 Linaro Ltd.
+#
+# Validate WHENCE and config.txt file entries for consistency and completeness
 
 import os, re, sys, yaml
 

@@ -1,6 +1,8 @@
 #! /usr/bin/python3
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2024 Linaro Ltd.
+#
+# Filter WHENCE entries to only those referenced by a config file
 
 import os, re, sys
 
