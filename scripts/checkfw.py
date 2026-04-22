@@ -1,6 +1,8 @@
 #! /usr/bin/python3
 # SPDX-License-Identifier: MIT
 # Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+#
+# Check firmware version strings in binaries against linux-firmware repo
 
 import glob
 import os

@@ -1,6 +1,8 @@
 #!/bin/sh
 # SPDX-License-Identifier: MIT
 # Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+#
+# Tag, package, and sign a new release tarball
 
 set -e
 make check
