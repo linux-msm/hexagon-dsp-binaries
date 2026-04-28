@@ -68,7 +68,7 @@ Install: sm8750/Qualcomm/SM8750-MTP	cdsp	CDSP.HT.3.1-00889-PAKALA-1
 
 # KAANAPALI MTP
 Install: kaanapali/Qualcomm/Kaanapali-MTP	adsp	LPAIDSP.HT.1.6.1-00002-KAANAPALI-1
-Install: kaanapali/Qualcomm/Kaanapali-MTP	cdsp	CDSP.HT.3.2-00726.1-KAANAPALI-1
+Install: kaanapali/Qualcomm/Kaanapali-MTP	cdsp	CDSP.HT.3.2.c1-00001-KAANAPALI-3
 
 # Glymur CRD
 Install: glymur/Qualcomm/Glymur-CRD	adsp	LPAIDSP.HT.1.6.2-00001-GLYMUR-1
