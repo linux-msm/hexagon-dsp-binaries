@@ -329,6 +329,12 @@ Device: Qualcomm Technologies, Inc. Glymur CRD
 Licence: LICENSE.qcom-2
 Status: Redistributable
 
+--------------------------------------------------------------------------
+Dir: kaanapali/Qualcomm/Kaanapali-MTP/CDSP.HT.3.2.c1-00001-KAANAPALI-3
+Device: Qualcomm Technologies, Inc. Kaanapali MTP
+Licence: LICENSE.qcom-2
+Status: Redistributable
+
 -------------------------------------------------------------------------
 Dir: glymur/Qualcomm/Glymur-CRD/LPAIDSP.HT.1.6.2-00001-GLYMUR-1
 Device: Qualcomm Technologies, Inc. Glymur CRD
