@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/linux-msm/hexagon-dsp-binaries/conf.d/schema.json",
+  "title": "hexagon-dsp-binaries conf.d entry",
+  "description": "Schema for conf.d/hexagon-dsp-binaries-*.yaml files.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["machines"],
+  "properties": {
+    "machines": {
+      "type": "object",
+      "minProperties": 1,
+      "patternProperties": {
+        "^.+$": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["DSP_LIBRARY_PATH"],
+          "properties": {
+            "DSP_LIBRARY_PATH": {
+              "type": "string",
+              "pattern": "^([^/]+/)+dsp$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# yaml-language-server: $schema=schema.json
 machines:
   Qualcomm Technologies, Inc. DB820c:
     DSP_LIBRARY_PATH: apq8096/Qualcomm/db820c/dsp

@@ -4,7 +4,9 @@
 #
 # Validate WHENCE and config.txt file entries for consistency and completeness
 
-import os, re, sys, yaml
+import json, os, re, sys, yaml
+
+import jsonschema
 
 def empty_data():
     return {'dirs': {}}
@@ -177,35 +179,96 @@ def list_git():
     if git.close():
         sys.stderr.write("WHENCE: skipped contents validation, git file listing failed\n")
 
+def check_conf_file_format(path):
+    """Validate properties not visible to the YAML parser."""
+    okay = True
+
+    with open(path, "rb") as f:
+        raw = f.read()
+
+    if len(raw) == 0:
+        sys.stderr.write(f"{path}: file is empty\n")
+        return False
+
+    if not raw.endswith(b"\n"):
+        sys.stderr.write(
+            f"{path}: missing trailing newline at end of file\n")
+        okay = False
+    elif raw.endswith(b"\n\n"):
+        sys.stderr.write(
+            f"{path}: trailing blank line(s) at end of file\n")
+        okay = False
+
+    first_line = raw.split(b"\n", 1)[0].decode("utf-8", errors="replace")
+    SPDX_HEADER_RE = re.compile(r"^# SPDX-License-Identifier: [^\s]+\s*$")
+    if not SPDX_HEADER_RE.match(first_line):
+        sys.stderr.write(
+            f"{path}: missing SPDX-License-Identifier header on first"
+            f" line\n")
+        okay = False
+
+    return okay
+
+def load_schema():
+    with open("conf.d/schema.json", encoding="utf-8") as file:
+        return json.load(file)
+
+def check_conf_against_schema(path, data, validator):
+    """Validate YAML contents against conf.d/schema.json."""
+    okay = True
+    for err in sorted(validator.iter_errors(data), key=lambda e: e.path):
+        loc = "/".join(str(p) for p in err.absolute_path) or "<root>"
+        sys.stderr.write(f"{path}: {loc}: {err.message}\n")
+        okay = False
+    return okay
+
 def load_machine_dsp_paths():
-    """Load and parse 00-hexagon-dsp-binaries.yaml to get valid DSP library paths."""
+    """Validate and parse conf.d/*.yaml files; return the set of base paths."""
     paths = set()
     okay = True
 
-    for conf in os.listdir("conf.d"):
+    validator = jsonschema.Draft202012Validator(load_schema())
+
+    for conf in sorted(os.listdir("conf.d")):
+        if conf == "schema.json":
+            continue
         if not conf.endswith(".yaml"):
+            sys.stderr.write(
+                f"conf.d/{conf}: unexpected non-yaml file\n")
+            okay = False
             continue
 
-        with open(os.path.join("conf.d", conf), encoding="utf-8") as file:
-            data = yaml.safe_load(file)
-            if not data or 'machines' not in data:
-                sys.stderr.write(f"Failed to load config data from {conf}\n")
+        full = os.path.join("conf.d", conf)
+
+        if not check_conf_file_format(full):
+            okay = False
+
+        try:
+            with open(full, encoding="utf-8") as file:
+                data = yaml.safe_load(file)
+        except yaml.YAMLError as e:
+            sys.stderr.write(f"{full}: YAML parse error: {e}\n")
+            okay = False
+            continue
+
+        if not check_conf_against_schema(full, data, validator):
+            okay = False
+            continue
+
+        # Extract base paths (without /dsp suffix) from DSP_LIBRARY_PATH
+        for machine_name, machine_data in data['machines'].items():
+            dsp_path = machine_data['DSP_LIBRARY_PATH']
+            base_path = dsp_path[:-len('/dsp')]
+            paths.add(base_path)
+
+            suffix = base_path[base_path.find('/') + 1:]
+            name = "hexagon-dsp-binaries-%s.yaml" % \
+                suffix.lower().replace('/', '-')
+            if name != conf:
+                sys.stderr.write(
+                    f"Name mismatch, {conf} should be named {name}\n")
                 okay = False
-                continue
 
-            # Extract base paths (without /dsp suffix) from DSP_LIBRARY_PATH
-            for machine_name, machine_data in data['machines'].items():
-                if 'DSP_LIBRARY_PATH' in machine_data:
-                    dsp_path = machine_data['DSP_LIBRARY_PATH']
-                    # Remove /dsp suffix to get base path
-                    if dsp_path.endswith('/dsp'):
-                        base_path = dsp_path[:-4]
-                        paths.add(base_path)
-
-                        name = "hexagon-dsp-binaries-%s.yaml" % base_path[base_path.find('/') + 1:].lower().replace('/', '-')
-                        if name != conf:
-                            sys.stderr.write(f"Name mismatch, {conf} should be named {name}\n")
-                            okay = False
     return paths if okay else None
 
 def check_config_against_machine_paths(config_data, machine_paths):
@@ -278,7 +341,8 @@ def main():
 
     for file in list_git():
         if os.path.dirname(file) == "conf.d" and \
-                os.path.basename(file).endswith(".yaml"):
+                (os.path.basename(file).endswith(".yaml") or
+                 os.path.basename(file) == "schema.json"):
             continue
 
         if os.path.dirname(file) in dirs:

@@ -12,6 +12,7 @@ install:
 	./scripts/install.sh config.txt ${DESTDIR}/${DSPDIR}
 	install -d -m 0755 ${DESTDIR}/${DSPDIR}/conf.d/
 	install -m 0644 conf.d/*.yaml ${DESTDIR}/${DSPDIR}/conf.d/
+	install -m 0644 conf.d/schema.json ${DESTDIR}/${DSPDIR}/conf.d/
 
 TAG = $(shell git describe)
 NAME = hexagon-dsp-binaries

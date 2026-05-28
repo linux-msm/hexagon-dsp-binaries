@@ -1,5 +1,6 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# yaml-language-server: $schema=schema.json
 machines:
   Thundercomm Dragonboard 845c:
     DSP_LIBRARY_PATH: sdm845/Thundercomm/db845c/dsp
