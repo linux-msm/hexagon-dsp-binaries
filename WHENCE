@@ -296,6 +296,12 @@ Licence: LICENSE.qcom-2
 Status: Redistributable
 
 --------------------------------------------------------------------------
+Dir: x1e80100/Qualcomm/Hamoa-IoT-EVK/CDSP.HT.2.9.c1-00082-HAMOA-1
+Device: Qualcomm Technologies, Inc. Hamoa IoT EVK
+Licence: LICENSE.qcom-2
+Status: Redistributable
+
+--------------------------------------------------------------------------
 Dir: sm8750/Qualcomm/SM8750-MTP/LPAIDSP.HT.1.2.c1-00379-PAKALA-1
 Dir: sm8750/Qualcomm/SM8750-MTP/CDSP.HT.3.1-00883-PAKALA-1
 Device: Qualcomm Technologies, Inc. SM8750 MTP
