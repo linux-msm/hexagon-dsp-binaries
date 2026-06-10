@@ -383,6 +383,11 @@ Device: Qualcomm Technologies, Inc. Glymur CRD
 Licence: LICENSE.qcom-2
 Status: Redistributable
 -------------------------------------------------------------------------
+Dir: glymur/Qualcomm/Glymur-CRD/LPAIDSP.HT.1.6.2-00009-GLYMUR-2
+Device: Qualcomm Technologies, Inc. Glymur CRD
+Licence: LICENSE.qcom-2
+Status: Redistributable
+-------------------------------------------------------------------------
 Dir: glymur/Qualcomm/Glymur-CRD/CDSP.HT.3.3-00311-GLYMUR-1
 Device: Qualcomm Technologies, Inc. Glymur CRD
 Licence: LICENSE.qcom-2
