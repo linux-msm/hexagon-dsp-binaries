@@ -75,7 +75,7 @@ Install: glymur/Qualcomm/Glymur-CRD	adsp	LPAIDSP.HT.1.6.2-00009-GLYMUR-2
 Install: glymur/Qualcomm/Glymur-CRD	cdsp	CDSP.HT.3.3-00311-GLYMUR-1
 
 # Shikra CQS EVK
-Install: shikra/Qualcomm/Shikra-CQS-EVK	cdsp	CDSP.VT.2.4.3-00076-SHIKRA-1
+Install: shikra/Qualcomm/Shikra-CQS-EVK	cdsp	CDSP.VT.2.4.3-00088-SHIKRA-1
 
 # Arduino Monza
 Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/adsp	qcs8300/Arduino/Monza/dsp/adsp
