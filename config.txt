@@ -77,6 +77,12 @@ Install: glymur/Qualcomm/Glymur-CRD	cdsp	CDSP.HT.3.3-00315-GLYMUR-1
 # Shikra CQS EVK
 Install: shikra/Qualcomm/Shikra-CQS-EVK	cdsp	CDSP.VT.2.4.3-00088-SHIKRA-1
 
+# Shikra CQM EVK 
+Link: shikra/Qualcomm/Shikra-CQS-EVK/dsp/cdsp	shikra/Qualcomm/Shikra-CQM-EVK/dsp/cdsp
+
+# Shikra IQS EVK 
+Link: shikra/Qualcomm/Shikra-CQS-EVK/dsp/cdsp	shikra/Qualcomm/Shikra-IQS-EVK/dsp/cdsp
+
 # Arduino Monza
 Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/adsp	qcs8300/Arduino/Monza/dsp/adsp
 Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/cdsp	qcs8300/Arduino/Monza/dsp/cdsp
