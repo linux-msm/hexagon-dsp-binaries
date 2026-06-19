@@ -404,6 +404,11 @@ Dir: glymur/Qualcomm/Glymur-CRD/CDSP.HT.3.3-00315-GLYMUR-1
 Device: Qualcomm Technologies, Inc. Glymur CRD
 Licence: LICENSE.qcom-2
 Status: Redistributable
+-------------------------------------------------------------------------
+Dir: glymur/Qualcomm/Glymur-CRD/LPAIDSP.HT.1.6.2-00020-GLYMUR-2
+Device: Qualcomm Technologies, Inc. Glymur CRD
+Licence: LICENSE.qcom-2
+Status: Redistributable
 
 -------------------------------------------------------------------------
 Dir: shikra/Qualcomm/Shikra-CQS-EVK/CDSP.VT.2.4.3-00076-SHIKRA-1
