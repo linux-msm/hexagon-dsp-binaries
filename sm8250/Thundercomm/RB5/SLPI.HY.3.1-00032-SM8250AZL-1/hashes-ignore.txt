@@ -1,0 +1,12 @@
+# Binaries not authorised by the SLPI.HY.3.1-00032-SM8250AZL-1 firmware.
+#
+# The concatenation of these binaries' ELF segment SHA-256 digests is not
+# present in the firmware hash table, so the matching signed firmware does not
+# authorise them. They are listed here, one per line, so the firmware hash
+# check (scripts/checkfw.py) does not flag them; '#' starts a comment.
+fastrpc_shell_2
+libsns_direct_channel_skel.so
+libstabilitydomain_skel.so
+libsysmon_skel.so
+libsysmondomain_skel.so
+libsysmonquery_skel.so
