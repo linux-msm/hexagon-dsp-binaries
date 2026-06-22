@@ -317,6 +317,10 @@ def check_dir(subdir):
             sys.stderr.write("WHENCE: not a file %s\n" % fullname)
             okay = False
 
+        # Optional list of binaries exempt from the firmware hash check.
+        if file == "hashes-ignore.txt":
+            continue
+
         if not pattern_shell.match(file) and \
            not pattern_library.match(file):
                sys.stderr.write("WHENCE: unknown file type %s\n" % fullname)
