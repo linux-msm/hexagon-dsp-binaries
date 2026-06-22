@@ -341,7 +341,7 @@ def main():
         if 'licence' in data:
             licences[data['licence'][0]] = None
 
-    known_files = ['config.txt', 'Makefile', 'TODO', 'README.md', 'WHENCE']
+    known_files = ['.gitignore', 'config.txt', 'Makefile', 'TODO', 'README.md', 'WHENCE']
 
     for file in list_git():
         if os.path.dirname(file) == "conf.d" and \
