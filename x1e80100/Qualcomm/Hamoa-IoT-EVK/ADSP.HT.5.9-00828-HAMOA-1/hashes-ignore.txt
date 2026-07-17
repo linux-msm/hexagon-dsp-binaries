@@ -1,0 +1,21 @@
+# Binaries not authorised by the ADSP.HT.5.9-00828-HAMOA-1 firmware.
+#
+# The concatenation of these binaries' ELF segment SHA-256 digests is not
+# present in the firmware hash table, so the matching signed firmware does not
+# authorise them. They are listed here, one per line, so the firmware hash
+# check (scripts/checkfw.py) does not flag them; '#' starts a comment.
+CFCM.so.1
+SAPlusCmnModule.so.1
+fastrpc_shell_0
+libsns_device_mode_skel.so
+libsns_dynamic_loader_skel.so
+libsns_remote_proc_state_skel.so
+libstabilitydomain_skel.so
+libsysmon_skel.so
+libsysmondomain_skel.so
+libsysmonquery_skel.so
+sbc_dec_module.so.1
+sbc_enc_module.so.1
+smecns_v2_module_fvxiii.so.1
+sns_tppe.so
+tsm_module.so.1

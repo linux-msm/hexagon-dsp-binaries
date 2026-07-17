@@ -317,6 +317,10 @@ def check_dir(subdir):
             sys.stderr.write("WHENCE: not a file %s\n" % fullname)
             okay = False
 
+        # Optional list of binaries exempt from the firmware hash check.
+        if file == "hashes-ignore.txt":
+            continue
+
         if not pattern_shell.match(file) and \
            not pattern_library.match(file):
                sys.stderr.write("WHENCE: unknown file type %s\n" % fullname)
@@ -337,7 +341,7 @@ def main():
         if 'licence' in data:
             licences[data['licence'][0]] = None
 
-    known_files = ['config.txt', 'Makefile', 'TODO', 'README.md', 'WHENCE']
+    known_files = ['.gitignore', 'config.txt', 'Makefile', 'TODO', 'README.md', 'WHENCE']
 
     for file in list_git():
         if os.path.dirname(file) == "conf.d" and \

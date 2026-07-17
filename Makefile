@@ -31,5 +31,8 @@ dist:
 
 check:
 	./scripts/check.py
+ifdef FIRMWARE
+	./scripts/checkfw.py $(FIRMWARE)
+endif
 
 .PHONY: dist check

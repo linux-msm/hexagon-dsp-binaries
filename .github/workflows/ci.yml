@@ -22,8 +22,38 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y python3-jsonschema
 
+      - name: Resolve linux-firmware revision
+        id: lfw
+        run: |
+          set -ux
+          url=https://gitlab.com/kernel-firmware/linux-firmware.git
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git ls-remote "$url" HEAD | cut -f1)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache linux-firmware
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: linux-firmware
+          # Keyed on the upstream HEAD commit: an exact hit is already at the
+          # right revision, while restore-keys seeds a stale clone to update.
+          key: linux-firmware-${{ steps.lfw.outputs.sha }}
+          restore-keys: |
+            linux-firmware-
+
+      - name: Fetch linux-firmware
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          set -ux
+          if [ -d linux-firmware/.git ]; then
+            git -C linux-firmware fetch --depth 1 origin HEAD
+            git -C linux-firmware reset --hard FETCH_HEAD
+          else
+            git clone --depth 1 "${{ steps.lfw.outputs.url }}" linux-firmware
+          fi
+
       - name: Check
-        run: make check
+        run: make check FIRMWARE="$PWD/linux-firmware"
 
       - name: Check install
         run: make install DESTDIR=`pwd`/install

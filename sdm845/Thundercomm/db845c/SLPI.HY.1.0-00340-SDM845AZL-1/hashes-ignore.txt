@@ -1,0 +1,14 @@
+# Binaries not authorised by the SLPI.HY.1.0-00340-SDM845AZL-1 firmware.
+#
+# The concatenation of these binaries' ELF segment SHA-256 digests is not
+# present in the firmware hash table, so the matching signed firmware does not
+# authorise them. They are listed here, one per line, so the firmware hash
+# check (scripts/checkfw.py) does not flag them; '#' starts a comment.
+cellinfo_tools.so
+chre_app_coverage.so
+chre_app_coverage2.so
+chre_app_oem.so
+chre_app_sensor_cfg.so
+chre_pal.so
+libchre_slpi_skel.so
+sensor_testapp_40.so
