@@ -4,3 +4,6 @@
 machines:
   Thundercomm Dragonboard 845c:
     DSP_LIBRARY_PATH: sdm845/Thundercomm/db845c/dsp
+    ADSP_ARCH: v65
+    CDSP_ARCH: v65
+    SDSP_ARCH: v65
