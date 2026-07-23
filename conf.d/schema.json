@@ -19,6 +19,22 @@
             "DSP_LIBRARY_PATH": {
               "type": "string",
               "pattern": "^([^/]+/)+dsp$"
+            },
+            "ADSP_ARCH": {
+              "type": "string",
+              "pattern": "^v[0-9a-f]+$"
+            },
+            "MDSP_ARCH": {
+              "type": "string",
+              "pattern": "^v[0-9a-f]+$"
+            },
+            "SDSP_ARCH": {
+              "type": "string",
+              "pattern": "^v[0-9a-f]+$"
+            },
+            "CDSP_ARCH": {
+              "type": "string",
+              "pattern": "^v[0-9a-f]+$"
             }
           }
         }
