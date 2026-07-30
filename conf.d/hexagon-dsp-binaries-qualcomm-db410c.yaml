@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# yaml-language-server: $schema=schema.json
+machines:
+  Qualcomm Technologies, Inc. APQ 8016 SBC:
+    DSP_LIBRARY_PATH: apq8016/Qualcomm/db410c/dsp
+    ADSP_ARCH: v5
