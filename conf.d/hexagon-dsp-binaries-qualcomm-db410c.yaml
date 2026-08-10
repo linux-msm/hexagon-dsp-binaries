@@ -2,7 +2,6 @@
 # Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # yaml-language-server: $schema=schema.json
 machines:
-  Qualcomm Technologies, Inc. DB820c:
-    DSP_LIBRARY_PATH: apq8096/Qualcomm/db820c/dsp
-    ADSP_ARCH: v60
-    SDSP_ARCH: v60
+  Qualcomm Technologies, Inc. APQ 8016 SBC:
+    DSP_LIBRARY_PATH: apq8016/Qualcomm/db410c/dsp
+    ADSP_ARCH: v5
