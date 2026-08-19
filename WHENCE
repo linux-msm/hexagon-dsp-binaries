@@ -447,3 +447,9 @@ Dir: shikra/Qualcomm/Shikra-CQS-EVK/CDSP.VT.2.4.3-00088-SHIKRA-1
 Device: Qualcomm Technologies, Inc. Shikra CQS EVK
 Licence: LICENSE.qcom-2
 Status: Redistributable
+
+-------------------------------------------------------------------------
+Dir: eliza/Qualcomm/Eliza-MTP/CDSP.HT.3.1-00889-PAKALA-1
+Device: Qualcomm Technologies, Inc. Eliza MTP
+Licence: LICENSE.qcom-2
+Status: Redistributable
