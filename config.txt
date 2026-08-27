@@ -77,6 +77,10 @@ Install: kaanapali/Qualcomm/Kaanapali-MTP	cdsp	CDSP.HT.3.2.c1-00001-KAANAPALI-3
 Install: glymur/Qualcomm/Glymur-CRD	adsp	LPAIDSP.HT.1.6.2-00020-GLYMUR-2
 Install: glymur/Qualcomm/Glymur-CRD	cdsp	CDSP.HT.3.3-00315-GLYMUR-1
 
+# Mahua CRD
+Link: glymur/Qualcomm/Glymur-CRD/dsp/adsp	mahua/Qualcomm/Mahua-CRD/dsp/adsp
+Link: glymur/Qualcomm/Glymur-CRD/dsp/cdsp	mahua/Qualcomm/Mahua-CRD/dsp/cdsp
+
 # Shikra CQS EVK
 Install: shikra/Qualcomm/Shikra-CQS-EVK	cdsp	CDSP.VT.2.4.3-00088-SHIKRA-1
 
