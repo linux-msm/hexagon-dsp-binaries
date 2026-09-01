@@ -6,6 +6,10 @@ machines:
     DSP_LIBRARY_PATH: qcs615/Qualcomm/QCS615-RIDE/dsp
     ADSP_ARCH: v66
     CDSP_ARCH: v66
+  Qualcomm QCS615 Talos lyra EVK:
+    DSP_LIBRARY_PATH: qcs615/Qualcomm/QCS615-RIDE/dsp
+    ADSP_ARCH: v66
+    CDSP_ARCH: v66
   Qualcomm Technologies, Inc. QCS615 Ride (IQ-615 Beta EVK):
     DSP_LIBRARY_PATH: qcs615/Qualcomm/QCS615-RIDE/dsp
     ADSP_ARCH: v66
