@@ -38,6 +38,10 @@ Install: qcm6490/Thundercomm/RB3gen2	cdsp	CDSP.HT.2.5.c3-00134-KODIAK-1
 Install: qcs6490/radxa/dragon-q6a	adsp	ADSP.HT.5.5.c9-00028-KODIAK-2
 Install: qcs6490/radxa/dragon-q6a	cdsp	CDSP.HT.2.5.c4-00004-KODIAK-1
 
+# Qualcomm SC8280XP CRD
+Install: sc8280xp/Qualcomm/SC8280XP-CRD	adsp	ADSP.HT.5.6.c2-00037-MAKENA-1
+Install: sc8280xp/Qualcomm/SC8280XP-CRD	cdsp	CDSP.HT.2.6-00735.5-MAKENA-1
+
 # Thundercomm RUBIK Pi 3
 Install: qcs6490/Thundercomm/RubikPi3	adsp	ADSP.HT.5.5.c8-00217-KODIAK-1
 Link: qcm6490/Thundercomm/RB3gen2/dsp/cdsp	qcs6490/Thundercomm/RubikPi3/dsp/cdsp
@@ -114,3 +118,7 @@ Link: x1e80100/Qualcomm/Hamoa-IoT-EVK/dsp/cdsp	x1p42100/Qualcomm/Purwa-IoT-EVK/d
 # QCM6490 IDP
 Link: qcm6490/Thundercomm/RB3gen2/dsp/adsp      qcm6490/Qualcomm/QCM6490-IDP/dsp/adsp
 Link: qcm6490/Thundercomm/RB3gen2/dsp/cdsp      qcm6490/Qualcomm/QCM6490-IDP/dsp/cdsp
+
+# Radxa Dragon Q8B
+Link: sc8280xp/Qualcomm/SC8280XP-CRD/dsp/adsp   sc8280xp/radxa/dragon-q8b/dsp/adsp
+Link: sc8280xp/Qualcomm/SC8280XP-CRD/dsp/cdsp   sc8280xp/radxa/dragon-q8b/dsp/cdsp

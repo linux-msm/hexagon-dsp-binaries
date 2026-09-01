@@ -156,6 +156,14 @@ Status: Redistributable
 
 --------------------------------------------------------------------------
 
+Dir: sc8280xp/Qualcomm/SC8280XP-CRD/ADSP.HT.5.6.c2-00037-MAKENA-1
+Dir: sc8280xp/Qualcomm/SC8280XP-CRD/CDSP.HT.2.6-00735.5-MAKENA-1
+Device: Qualcomm SC8280XP CRD
+Licence: LICENSE.qcom
+Status: Redistributable
+
+--------------------------------------------------------------------------
+
 Dir: qcs6490/Thundercomm/RubikPi3/ADSP.HT.5.5.c8-00217-KODIAK-1
 Device: Thundercomm RUBIK Pi 3
 Licence: LICENSE.qcom
