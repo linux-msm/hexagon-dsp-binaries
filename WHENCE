@@ -530,3 +530,10 @@ Dir: nord/Qualcomm/SA8797P-Ride-Embedded/adsp1-HPASS.AT.1.0.1-00003-NORD-6
 Device: Qualcomm Technologies, Inc. SA8797P Ride Embedded
 Licence: LICENSE.qcom-2
 Status: Redistributable
+
+--------------------------------------------------------------------------
+Dir: qcs8550/Qualcomm/QCS8550/ADSP.HT.5.8-01422-KAILUA_IOT-1
+Device: Thundercomm / Qualcomm Robotics RB5Gen2 Platform
+Licence: LICENSE.qcom-2
+Licence: Notice.qcs8550.txt
+Status: Redistributable

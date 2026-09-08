@@ -146,3 +146,6 @@ Link: x1e80100/Qualcomm/Hamoa-IoT-EVK/dsp/cdsp	x1p42100/Qualcomm/Purwa-IoT-EVK/d
 # QCM6490 IDP
 Link: qcm6490/Thundercomm/RB3gen2/dsp/adsp      qcm6490/Qualcomm/QCM6490-IDP/dsp/adsp
 Link: qcm6490/Thundercomm/RB3gen2/dsp/cdsp      qcm6490/Qualcomm/QCM6490-IDP/dsp/cdsp
+
+# QCS8550 RB5gen2
+Install: qcs8550/Qualcomm/QCS8550	adsp	ADSP.HT.5.8-01422-KAILUA_IOT-1
