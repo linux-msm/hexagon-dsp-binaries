@@ -204,3 +204,7 @@ Install: x1e80100/Qualcomm/Hamoa-IoT-EVK	cdsp	CDSP.HT.2.9.c1-00094-HAMOA-1
 Machine: x1p42100/Qualcomm/Purwa-IoT-EVK	Qualcomm Technologies, Inc. Purwa IoT EVK
 Reuse: x1p42100/Qualcomm/Purwa-IoT-EVK	adsp	x1e80100/Qualcomm/Hamoa-IoT-EVK
 Reuse: x1p42100/Qualcomm/Purwa-IoT-EVK	cdsp	x1e80100/Qualcomm/Hamoa-IoT-EVK
+
+# QCS8550 RB5gen2
+Machine: qcs8550/Qualcomm/QCS8550	Qualcomm Technologies, Inc. QCS8550 RB5Gen2
+Install: qcs8550/Qualcomm/QCS8550	adsp	ADSP.HT.5.8-01422-KAILUA_IOT-1
