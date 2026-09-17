@@ -81,6 +81,9 @@ Install: glymur/Qualcomm/Glymur-CRD	cdsp	CDSP.HT.3.3-00315-GLYMUR-1
 Link: glymur/Qualcomm/Glymur-CRD/dsp/adsp	mahua/Qualcomm/Mahua-CRD/dsp/adsp
 Link: glymur/Qualcomm/Glymur-CRD/dsp/cdsp	mahua/Qualcomm/Mahua-CRD/dsp/cdsp
 
+# HAWI MTP
+Install: hawi/Qualcomm/Hawi-MTP	cdsp	CDSP.HT.3.6-00501.6-HAWI-1
+
 # Shikra CQS EVK
 Install: shikra/Qualcomm/Shikra-CQS-EVK	cdsp	CDSP.VT.2.4.3-00088-SHIKRA-1
 
