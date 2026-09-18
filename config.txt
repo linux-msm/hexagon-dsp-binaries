@@ -81,6 +81,11 @@ Install: glymur/Qualcomm/Glymur-CRD	cdsp	CDSP.HT.3.3-00315-GLYMUR-1
 Link: glymur/Qualcomm/Glymur-CRD/dsp/adsp	mahua/Qualcomm/Mahua-CRD/dsp/adsp
 Link: glymur/Qualcomm/Glymur-CRD/dsp/cdsp	mahua/Qualcomm/Mahua-CRD/dsp/cdsp
 
+# Nord Ride SX
+Install: nord/Qualcomm/Nord-Ride-SX	adsp	adsp-HPASS.AT.1.0.1-00003-NORD-4
+Install: nord/Qualcomm/Nord-Ride-SX	adsp1	adsp1-HPASS.AT.1.0.1-00003-NORD-4
+Install: nord/Qualcomm/Nord-Ride-SX	cdsp	cdsp-NSP.AT.1.0-00579-NORD-1
+
 # Shikra CQS EVK
 Install: shikra/Qualcomm/Shikra-CQS-EVK	cdsp	CDSP.VT.2.4.3-00088-SHIKRA-1
 

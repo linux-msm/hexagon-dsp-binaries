@@ -1,0 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# yaml-language-server: $schema=schema.json
+machines:
+  Qualcomm Technologies, Inc. Nord Ride SX:
+    DSP_LIBRARY_PATH: nord/Qualcomm/Nord-Ride-SX/dsp
