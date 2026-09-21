@@ -49,6 +49,13 @@ Install: sa8775p/Qualcomm/SA8775P-RIDE	cdsp1	cdsp1-DSP.AT.1.0.1-00204-LEMANS-1
 Install: sa8775p/Qualcomm/SA8775P-RIDE	gdsp0	gdsp0-DSP.AT.1.0.1-00204-LEMANS-1
 Install: sa8775p/Qualcomm/SA8775P-RIDE	gdsp1	gdsp1-DSP.AT.1.0.1-00204-LEMANS-1
 
+# SA8775P Draco EVK
+Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	sa8775p/Qualcomm/SA8775P-Draco-EVK/dsp/adsp
+Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp	sa8775p/Qualcomm/SA8775P-Draco-EVK/dsp/cdsp
+Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp1	sa8775p/Qualcomm/SA8775P-Draco-EVK/dsp/cdsp1
+Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	sa8775p/Qualcomm/SA8775P-Draco-EVK/dsp/gdsp0
+Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp1	sa8775p/Qualcomm/SA8775P-Draco-EVK/dsp/gdsp1
+
 # QCS8300 RIDE
 Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	qcs8300/Qualcomm/QCS8300-RIDE/dsp/adsp
 Install: qcs8300/Qualcomm/QCS8300-RIDE	cdsp	cdsp-DSP.AT.1.0.1-00204-LEMANS-1
