@@ -480,3 +480,11 @@ Dir: eliza/Qualcomm/Eliza-MTP/CDSP.HT.3.1-00889-PAKALA-1
 Device: Qualcomm Technologies, Inc. Eliza MTP
 Licence: LICENSE.qcom-2
 Status: Redistributable
+
+--------------------------------------------------------------------------
+Dir: nord/Qualcomm/Nord-Ride-SX/adsp-HPASS.AT.1.0.1-00003-NORD-4
+Dir: nord/Qualcomm/Nord-Ride-SX/adsp1-HPASS.AT.1.0.1-00003-NORD-4
+Dir: nord/Qualcomm/Nord-Ride-SX/cdsp-NSP.AT.1.0-00579-NORD-1
+Device: Qualcomm Technologies, Inc. Nord Ride SX
+Licence: LICENSE.qcom-2
+Status: Redistributable
