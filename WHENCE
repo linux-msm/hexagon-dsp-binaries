@@ -480,3 +480,9 @@ Dir: eliza/Qualcomm/Eliza-MTP/CDSP.HT.3.1-00889-PAKALA-1
 Device: Qualcomm Technologies, Inc. Eliza MTP
 Licence: LICENSE.qcom-2
 Status: Redistributable
+
+--------------------------------------------------------------------------
+Dir: hawi/Qualcomm/Hawi-MTP/CDSP.HT.3.6-00501.6-HAWI-1
+Device: Qualcomm Technologies, Inc. Hawi MTP
+Licence: LICENSE.qcom-2
+Status: Redistributable
