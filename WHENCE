@@ -344,13 +344,6 @@ Licence: LICENSE.qcom-2
 Status: Redistributable
 
 --------------------------------------------------------------------------
-
-Dir: qcs615/Qualcomm/QCS615-RIDE/ADSP.VT.5.2.c6-00084.1-SM6150-1
-Device: Qualcomm Technologies, Inc. QCS615 Ride
-Licence: LICENSE.qcom-2
-Status: Redistributable
-
---------------------------------------------------------------------------
 Dir: x1e80100/Qualcomm/Hamoa-IoT-EVK/ADSP.HT.5.9-00828-HAMOA-1
 Dir: x1e80100/Qualcomm/Hamoa-IoT-EVK/CDSP.HT.2.9.c1-00069-HAMOA-1
 Device: Qualcomm Technologies, Inc. Hamoa IoT EVK
