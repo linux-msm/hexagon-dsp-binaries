@@ -92,12 +92,12 @@ Link: shikra/Qualcomm/Shikra-CQS-EVK/dsp/cdsp	shikra/Qualcomm/Shikra-IQS-EVK/dsp
 
 # Arduino Monza
 Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	qcs8300/Arduino/Monza/dsp/adsp
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp	qcs8300/Arduino/Monza/dsp/cdsp
+Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/cdsp	qcs8300/Arduino/Monza/dsp/cdsp
 Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	qcs8300/Arduino/Monza/dsp/gdsp0
 
 # IQ8275 EVK
 Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/adsp
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/cdsp
+Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/cdsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/cdsp
 Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	qcs8300/Qualcomm/IQ8275-EVK/dsp/gdsp0
 
 # IQ9075 EVK
