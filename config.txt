@@ -91,6 +91,10 @@ Link: glymur/Qualcomm/Glymur-CRD/dsp/cdsp	mahua/Qualcomm/Mahua-CRD/dsp/cdsp
 # HAWI MTP
 Install: hawi/Qualcomm/Hawi-MTP	cdsp	CDSP.HT.3.6-00501.6-HAWI-1
 
+# MAILI MTP
+Install: maili/Qualcomm/Maili-MTP	adsp	LPAIDSP.HT.1.6-00701.4-HAWI-3
+Link: hawi/Qualcomm/Hawi-MTP/dsp/cdsp	 maili/Qualcomm/Maili-MTP/dsp/cdsp
+
 # Shikra CQS EVK
 Install: shikra/Qualcomm/Shikra-CQS-EVK	cdsp	CDSP.VT.2.4.3-00088-SHIKRA-1
 
