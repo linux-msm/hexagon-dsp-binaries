@@ -74,6 +74,7 @@ Install: sm8750/Qualcomm/SM8750-MTP	adsp	LPAIDSP.HT.1.2.c2-00021-PAKALA-1
 Install: sm8750/Qualcomm/SM8750-MTP	cdsp	CDSP.HT.3.1-00889-PAKALA-1
 
 # ELIZA MTP
+Install: eliza/Qualcomm/Eliza-MTP	adsp	LPAIDSP.HT.1.2.c2-00064-PAKALA-3
 Install: eliza/Qualcomm/Eliza-MTP	cdsp	CDSP.HT.3.1-00889-PAKALA-1
 
 # KAANAPALI MTP
