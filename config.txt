@@ -89,6 +89,7 @@ Link: glymur/Qualcomm/Glymur-CRD/dsp/adsp	mahua/Qualcomm/Mahua-CRD/dsp/adsp
 Link: glymur/Qualcomm/Glymur-CRD/dsp/cdsp	mahua/Qualcomm/Mahua-CRD/dsp/cdsp
 
 # HAWI MTP
+Install: hawi/Qualcomm/Hawi-MTP	adsp	LPAIDSP.HT.1.6-00701.4-HAWI-3
 Install: hawi/Qualcomm/Hawi-MTP	cdsp	CDSP.HT.3.6-00501.6-HAWI-1
 
 # MAILI MTP
