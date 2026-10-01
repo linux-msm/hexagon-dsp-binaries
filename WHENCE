@@ -488,6 +488,12 @@ Licence: LICENSE.qcom-2
 Status: Redistributable
 
 --------------------------------------------------------------------------
+Dir: hawi/Qualcomm/Hawi-MTP/LPAIDSP.HT.1.6-00701.4-HAWI-3
+Device: Qualcomm Technologies, Inc. Hawi MTP
+Licence: LICENSE.qcom-2
+Status: Redistributable
+
+--------------------------------------------------------------------------
 Dir: maili/Qualcomm/Maili-MTP/LPAIDSP.HT.1.6-00701.4-HAWI-3
 Device: Qualcomm Technologies, Inc. Maili MTP
 Licence: LICENSE.qcom-2
