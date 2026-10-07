@@ -470,6 +470,12 @@ Licence: LICENSE.qcom-2
 Status: Redistributable
 
 -------------------------------------------------------------------------
+Dir: glymur/Qualcomm/Glymur-CRD/LPAIDSP.HT.1.6.2-00064-GLYMUR-1
+Device: Qualcomm Technologies, Inc. Glymur CRD
+Licence: LICENSE.qcom-2
+Status: Redistributable
+
+-------------------------------------------------------------------------
 Dir: shikra/Qualcomm/Shikra-CQS-EVK/CDSP.VT.2.4.3-00076-SHIKRA-1
 Device: Qualcomm Technologies, Inc. Shikra CQS EVK
 Licence: LICENSE.qcom-2
