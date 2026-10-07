@@ -169,6 +169,13 @@ Licence: LICENSE.qcom
 Status: Redistributable
 
 --------------------------------------------------------------------------
+
+Dir: qcs6490/Thundercomm/RubikPi3/ADSP.HT.5.5.c8-00249.1-KODIAK-1
+Device: Thundercomm RUBIK Pi 3
+Licence: LICENSE.qcom-2
+Status: Redistributable
+
+--------------------------------------------------------------------------
 Dir: sa8775p/Qualcomm/SA8775P-RIDE/adsp-DSP.AT.1.0.1-00079.2-LEMANS-1
 Dir: sa8775p/Qualcomm/SA8775P-RIDE/cdsp-DSP.AT.1.0.1-00079.2-LEMANS-1
 Dir: sa8775p/Qualcomm/SA8775P-RIDE/cdsp1-DSP.AT.1.0.1-00079.2-LEMANS-1
@@ -337,13 +344,6 @@ Licence: LICENSE.qcom-2
 Status: Redistributable
 
 --------------------------------------------------------------------------
-
-Dir: qcs615/Qualcomm/QCS615-RIDE/ADSP.VT.5.2.c6-00084.1-SM6150-1
-Device: Qualcomm Technologies, Inc. QCS615 Ride
-Licence: LICENSE.qcom-2
-Status: Redistributable
-
---------------------------------------------------------------------------
 Dir: x1e80100/Qualcomm/Hamoa-IoT-EVK/ADSP.HT.5.9-00828-HAMOA-1
 Dir: x1e80100/Qualcomm/Hamoa-IoT-EVK/CDSP.HT.2.9.c1-00069-HAMOA-1
 Device: Qualcomm Technologies, Inc. Hamoa IoT EVK
@@ -371,6 +371,12 @@ Status: Redistributable
 
 --------------------------------------------------------------------------
 Dir: x1e80100/Qualcomm/Hamoa-IoT-EVK/CDSP.HT.2.9.c1-00094-HAMOA-1
+Device: Qualcomm Technologies, Inc. Hamoa IoT EVK
+Licence: LICENSE.qcom-2
+Status: Redistributable
+
+--------------------------------------------------------------------------
+Dir: x1e80100/Qualcomm/Hamoa-IoT-EVK/ADSP.HT.5.9.c7-00004-HAMOA-1
 Device: Qualcomm Technologies, Inc. Hamoa IoT EVK
 Licence: LICENSE.qcom-2
 Status: Redistributable
@@ -481,9 +487,31 @@ Device: Qualcomm Technologies, Inc. Eliza MTP
 Licence: LICENSE.qcom-2
 Status: Redistributable
 
+-------------------------------------------------------------------------
+Dir: eliza/Qualcomm/Eliza-MTP/LPAIDSP.HT.1.2.c2-00064-PAKALA-3
+Device: Qualcomm Technologies, Inc. Eliza MTP
+Licence: LICENSE.qcom-2
+Status: Redistributable
+
 --------------------------------------------------------------------------
-Dir: nord/Qualcomm/Nord-Ride-SX/adsp-HPASS.AT.1.0.1-00003-NORD-4
-Dir: nord/Qualcomm/Nord-Ride-SX/adsp1-HPASS.AT.1.0.1-00003-NORD-4
+Dir: hawi/Qualcomm/Hawi-MTP/CDSP.HT.3.6-00501.6-HAWI-1
+Device: Qualcomm Technologies, Inc. Hawi MTP
+Licence: LICENSE.qcom-2
+Status: Redistributable
+
+--------------------------------------------------------------------------
+Dir: hawi/Qualcomm/Hawi-MTP/LPAIDSP.HT.1.6-00701.4-HAWI-3
+Device: Qualcomm Technologies, Inc. Hawi MTP
+Licence: LICENSE.qcom-2
+Status: Redistributable
+
+--------------------------------------------------------------------------
+Dir: maili/Qualcomm/Maili-MTP/LPAIDSP.HT.1.6-00701.4-HAWI-3
+Device: Qualcomm Technologies, Inc. Maili MTP
+Licence: LICENSE.qcom-2
+Status: Redistributable
+
+--------------------------------------------------------------------------
 Dir: nord/Qualcomm/Nord-Ride-SX/cdsp-NSP.AT.1.0-00579-NORD-1
 Device: Qualcomm Technologies, Inc. Nord Ride SX
 Licence: LICENSE.qcom-2

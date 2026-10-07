@@ -39,7 +39,7 @@ Install: qcs6490/radxa/dragon-q6a	adsp	ADSP.HT.5.5.c9-00028-KODIAK-2
 Install: qcs6490/radxa/dragon-q6a	cdsp	CDSP.HT.2.5.c4-00004-KODIAK-1
 
 # Thundercomm RUBIK Pi 3
-Install: qcs6490/Thundercomm/RubikPi3	adsp	ADSP.HT.5.5.c8-00217-KODIAK-1
+Install: qcs6490/Thundercomm/RubikPi3	adsp	ADSP.HT.5.5.c8-00249.1-KODIAK-1
 Link: qcm6490/Thundercomm/RB3gen2/dsp/cdsp	qcs6490/Thundercomm/RubikPi3/dsp/cdsp
 
 # SA8775P RIDE
@@ -49,17 +49,24 @@ Install: sa8775p/Qualcomm/SA8775P-RIDE	cdsp1	cdsp1-DSP.AT.1.0.1-00204-LEMANS-1
 Install: sa8775p/Qualcomm/SA8775P-RIDE	gdsp0	gdsp0-DSP.AT.1.0.1-00204-LEMANS-1
 Install: sa8775p/Qualcomm/SA8775P-RIDE	gdsp1	gdsp1-DSP.AT.1.0.1-00204-LEMANS-1
 
+# SA8775P Draco EVK
+Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	sa8775p/Qualcomm/Lemans-Draco-EVK/dsp/adsp
+Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp	sa8775p/Qualcomm/Lemans-Draco-EVK/dsp/cdsp
+Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp1	sa8775p/Qualcomm/Lemans-Draco-EVK/dsp/cdsp1
+Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	sa8775p/Qualcomm/Lemans-Draco-EVK/dsp/gdsp0
+Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp1	sa8775p/Qualcomm/Lemans-Draco-EVK/dsp/gdsp1
+
 # QCS8300 RIDE
 Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	qcs8300/Qualcomm/QCS8300-RIDE/dsp/adsp
 Install: qcs8300/Qualcomm/QCS8300-RIDE	cdsp	cdsp-DSP.AT.1.0.1-00204-LEMANS-1
 Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	qcs8300/Qualcomm/QCS8300-RIDE/dsp/gdsp0
 
 # QCS615 RIDE
-Install: qcs615/Qualcomm/QCS615-RIDE	adsp	ADSP.VT.5.2.c6-00084.1-SM6150-1
+Install: qcs615/Qualcomm/QCS615-RIDE	adsp	ADSP.VT.5.2.c6-00073-SM6150-1
 Install: qcs615/Qualcomm/QCS615-RIDE	cdsp	CDSP.VT.2.2.c4-00019-SM6150-1
 
 # Hamoa IoT EVK
-Install: x1e80100/Qualcomm/Hamoa-IoT-EVK	adsp	ADSP.HT.5.9-00839-HAMOA-1
+Install: x1e80100/Qualcomm/Hamoa-IoT-EVK	adsp	ADSP.HT.5.9.c7-00004-HAMOA-1
 Install: x1e80100/Qualcomm/Hamoa-IoT-EVK	cdsp	CDSP.HT.2.9.c1-00094-HAMOA-1
 
 # SM8750 MTP
@@ -67,6 +74,7 @@ Install: sm8750/Qualcomm/SM8750-MTP	adsp	LPAIDSP.HT.1.2.c2-00021-PAKALA-1
 Install: sm8750/Qualcomm/SM8750-MTP	cdsp	CDSP.HT.3.1-00889-PAKALA-1
 
 # ELIZA MTP
+Install: eliza/Qualcomm/Eliza-MTP	adsp	LPAIDSP.HT.1.2.c2-00064-PAKALA-3
 Install: eliza/Qualcomm/Eliza-MTP	cdsp	CDSP.HT.3.1-00889-PAKALA-1
 
 # KAANAPALI MTP
@@ -81,9 +89,15 @@ Install: glymur/Qualcomm/Glymur-CRD	cdsp	CDSP.HT.3.3-00315-GLYMUR-1
 Link: glymur/Qualcomm/Glymur-CRD/dsp/adsp	mahua/Qualcomm/Mahua-CRD/dsp/adsp
 Link: glymur/Qualcomm/Glymur-CRD/dsp/cdsp	mahua/Qualcomm/Mahua-CRD/dsp/cdsp
 
+# HAWI MTP
+Install: hawi/Qualcomm/Hawi-MTP	adsp	LPAIDSP.HT.1.6-00701.4-HAWI-3
+Install: hawi/Qualcomm/Hawi-MTP	cdsp	CDSP.HT.3.6-00501.6-HAWI-1
+
+# MAILI MTP
+Install: maili/Qualcomm/Maili-MTP	adsp	LPAIDSP.HT.1.6-00701.4-HAWI-3
+Link: hawi/Qualcomm/Hawi-MTP/dsp/cdsp	 maili/Qualcomm/Maili-MTP/dsp/cdsp
+
 # Nord Ride SX
-Install: nord/Qualcomm/Nord-Ride-SX	adsp	adsp-HPASS.AT.1.0.1-00003-NORD-4
-Install: nord/Qualcomm/Nord-Ride-SX	adsp1	adsp1-HPASS.AT.1.0.1-00003-NORD-4
 Install: nord/Qualcomm/Nord-Ride-SX	cdsp	cdsp-NSP.AT.1.0-00579-NORD-1
 
 # Shikra CQS EVK
@@ -97,12 +111,12 @@ Link: shikra/Qualcomm/Shikra-CQS-EVK/dsp/cdsp	shikra/Qualcomm/Shikra-IQS-EVK/dsp
 
 # Arduino Monza
 Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	qcs8300/Arduino/Monza/dsp/adsp
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp	qcs8300/Arduino/Monza/dsp/cdsp
+Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/cdsp	qcs8300/Arduino/Monza/dsp/cdsp
 Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	qcs8300/Arduino/Monza/dsp/gdsp0
 
 # IQ8275 EVK
 Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/adsp
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/cdsp
+Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/cdsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/cdsp
 Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	qcs8300/Qualcomm/IQ8275-EVK/dsp/gdsp0
 
 # IQ9075 EVK
