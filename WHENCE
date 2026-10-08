@@ -516,3 +516,10 @@ Dir: maili/Qualcomm/Maili-MTP/LPAIDSP.HT.1.6-00701.4-HAWI-3
 Device: Qualcomm Technologies, Inc. Maili MTP
 Licence: LICENSE.qcom-2
 Status: Redistributable
+
+--------------------------------------------------------------------------
+Dir: nord/Qualcomm/SA8797P-Ride-Embedded/adsp-HPASS.AT.1.0.1-00003-NORD-6
+Dir: nord/Qualcomm/SA8797P-Ride-Embedded/adsp1-HPASS.AT.1.0.1-00003-NORD-6
+Device: Qualcomm Technologies, Inc. SA8797P Ride Embedded
+Licence: LICENSE.qcom-2
+Status: Redistributable
