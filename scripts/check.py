@@ -301,7 +301,7 @@ def check_config_against_machine_paths(config_data, machine_paths):
     return ret
 
 def check_dir(subdir):
-    pattern_shell = re.compile("^fastrpc_shell(_unsigned)?_[0-9]$")
+    pattern_shell = re.compile(r"^fastrpc_shell(_unsigned)?(_[0-9])?$")
     pattern_library = re.compile("^[-_+0-9a-zA-Z]*\\.so(\\.[0-9]*)?$")
 
     okay = True
