@@ -227,11 +227,11 @@ def list_git():
         sys.stderr.write("WHENCE: skipped contents validation, git file listing failed\n")
 
 def load_schema():
-    with open("conf.d/schema.json", encoding="utf-8") as file:
+    with open("schema.json", encoding="utf-8") as file:
         return json.load(file)
 
 def check_conf_against_schema(path, data, validator):
-    """Validate the target configuration against conf.d/schema.json."""
+    """Validate the target configuration against schema.json."""
     okay = True
     for err in sorted(validator.iter_errors(data), key=lambda e: e.path):
         loc = "/".join(str(p) for p in err.absolute_path) or "<root>"
@@ -410,12 +410,9 @@ def main():
         if 'licence' in data:
             licences[data['licence'][0]] = None
 
-    known_files = ['.gitignore', 'config.txt', 'Makefile', 'TODO', 'README.md', 'WHENCE']
+    known_files = ['.gitignore', 'config.txt', 'Makefile', 'TODO', 'README.md', 'WHENCE', 'schema.json']
 
     for file in list_git():
-        if file == "conf.d/schema.json":
-            continue
-
         if os.path.dirname(file) in dirs:
             continue
 
