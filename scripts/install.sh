@@ -56,19 +56,14 @@ do_install() {
 	do_licence "${dstdir}" "${srcdir}" < WHENCE
 }
 
-# dest target link
-do_link() {
-	local target="$1/$2"
-	local link="$1/$3"
+# dest board DSP source-board
+do_reuse() {
+	local target="$1/$4/dsp/$3"
+	local link="$1/$2/dsp/$3"
 
 	mkdir -p "`dirname "${link}"`"
 	rm -f "${link}"
 	ln -sr -T "${target}" "${link}"
-}
-
-# dest board DSP source-board
-do_reuse() {
-	do_link "$1" "$4/dsp/$3" "$2/dsp/$3"
 }
 
 grep -v '^#\|^$' "${CFG}" | while read verb rest
@@ -76,9 +71,6 @@ do
 	case ${verb} in
 	"Install:" )
 		do_install ${DST} ${rest}
-		;;
-	"Link:" )
-		do_link ${DST} ${rest}
 		;;
 	"Reuse:" )
 		do_reuse ${DST} ${rest}

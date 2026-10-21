@@ -5,7 +5,6 @@
 # Format
 # Install: subdir			DSP	QC_IMAGE_VERSION_STRING
 # Reuse: subdir				DSP	source subdir
-# Link: target				source
 
 # Dragonboard 820c
 Install: apq8096/Qualcomm/db820c	adsp	ADSP.8996.2.7.1-00138
