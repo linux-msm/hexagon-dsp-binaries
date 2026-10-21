@@ -11,8 +11,8 @@
 Install: apq8096/Qualcomm/db820c	adsp	ADSP.8996.2.7.1-00138
 
 # ELIZA CQS EVK
-Link: eliza/Qualcomm/Eliza-MTP/dsp/adsp	eliza/Qualcomm/Eliza-CQS-EVK/dsp/adsp
-Link: eliza/Qualcomm/Eliza-MTP/dsp/cdsp	eliza/Qualcomm/Eliza-CQS-EVK/dsp/cdsp
+Reuse: eliza/Qualcomm/Eliza-CQS-EVK	adsp	eliza/Qualcomm/Eliza-MTP
+Reuse: eliza/Qualcomm/Eliza-CQS-EVK	cdsp	eliza/Qualcomm/Eliza-MTP
 
 # ELIZA MTP
 Install: eliza/Qualcomm/Eliza-MTP	adsp	LPAIDSP.HT.1.2.c2-00064-PAKALA-3
@@ -31,12 +31,12 @@ Install: kaanapali/Qualcomm/Kaanapali-MTP	adsp	LPAIDSP.HT.1.6.1-00035-KAANAPALI-
 Install: kaanapali/Qualcomm/Kaanapali-MTP	cdsp	CDSP.HT.3.2.c1-00001-KAANAPALI-3
 
 # Mahua CRD
-Link: glymur/Qualcomm/Glymur-CRD/dsp/adsp	mahua/Qualcomm/Mahua-CRD/dsp/adsp
-Link: glymur/Qualcomm/Glymur-CRD/dsp/cdsp	mahua/Qualcomm/Mahua-CRD/dsp/cdsp
+Reuse: mahua/Qualcomm/Mahua-CRD	adsp	glymur/Qualcomm/Glymur-CRD
+Reuse: mahua/Qualcomm/Mahua-CRD	cdsp	glymur/Qualcomm/Glymur-CRD
 
 # MAILI MTP
 Install: maili/Qualcomm/Maili-MTP	adsp	LPAIDSP.HT.1.6-00701.4-HAWI-3
-Link: hawi/Qualcomm/Hawi-MTP/dsp/cdsp	maili/Qualcomm/Maili-MTP/dsp/cdsp
+Reuse: maili/Qualcomm/Maili-MTP	cdsp	hawi/Qualcomm/Hawi-MTP
 
 # SA8797P Ride Embedded
 Install: nord/Qualcomm/SA8797P-Ride-Embedded	adsp	adsp-HPASS.AT.1.0.1-00003-NORD-6
@@ -44,14 +44,14 @@ Install: nord/Qualcomm/SA8797P-Ride-Embedded	adsp1	adsp1-HPASS.AT.1.0.1-00003-NO
 Install: nord/Qualcomm/SA8797P-Ride-Embedded	cdsp	cdsp-NSP.AT.1.0-00579-NORD-1
 
 # Arduino Imola
-Link: qcm2290/Thundercomm/RB1/dsp/adsp	qcm2290/Arduino/Imola/dsp/adsp
+Reuse: qcm2290/Arduino/Imola	adsp	qcm2290/Thundercomm/RB1
 
 # RB1
 Install: qcm2290/Thundercomm/RB1	adsp	ADSP.VT.5.4.1.c4-00013-KAMORTA-1
 
 # QCM6490 IDP
-Link: qcm6490/Thundercomm/RB3gen2/dsp/adsp	qcm6490/Qualcomm/QCM6490-IDP/dsp/adsp
-Link: qcm6490/Thundercomm/RB3gen2/dsp/cdsp	qcm6490/Qualcomm/QCM6490-IDP/dsp/cdsp
+Reuse: qcm6490/Qualcomm/QCM6490-IDP	adsp	qcm6490/Thundercomm/RB3gen2
+Reuse: qcm6490/Qualcomm/QCM6490-IDP	cdsp	qcm6490/Thundercomm/RB3gen2
 
 # RB3gen2
 Install: qcm6490/Thundercomm/RB3gen2	adsp	ADSP.HT.5.5.c8-00256.2-KODIAK-1
@@ -62,54 +62,54 @@ Install: qcs615/Qualcomm/QCS615-RIDE	adsp	ADSP.VT.5.2.c6-00095-SM6150-8
 Install: qcs615/Qualcomm/QCS615-RIDE	cdsp	CDSP.VT.2.2.c4-00019-SM6150-1
 
 # QCS615 Talos Lyra EVK
-Link: qcs615/Qualcomm/QCS615-RIDE/dsp/adsp qcs615/Qualcomm/Talos-Lyra-EVK/dsp/adsp
-Link: qcs615/Qualcomm/QCS615-RIDE/dsp/cdsp qcs615/Qualcomm/Talos-Lyra-EVK/dsp/cdsp
+Reuse: qcs615/Qualcomm/Talos-Lyra-EVK	adsp	qcs615/Qualcomm/QCS615-RIDE
+Reuse: qcs615/Qualcomm/Talos-Lyra-EVK	cdsp	qcs615/Qualcomm/QCS615-RIDE
 
 # Thundercomm RUBIK Pi 3
 Install: qcs6490/Thundercomm/RubikPi3	adsp	ADSP.HT.5.5.c8-00256.2-KODIAK-1
-Link: qcm6490/Thundercomm/RB3gen2/dsp/cdsp	qcs6490/Thundercomm/RubikPi3/dsp/cdsp
+Reuse: qcs6490/Thundercomm/RubikPi3	cdsp	qcm6490/Thundercomm/RB3gen2
 
 # Radxa Dragon Q6A
 Install: qcs6490/radxa/dragon-q6a	adsp	ADSP.HT.5.5.c9-00028-KODIAK-2
 Install: qcs6490/radxa/dragon-q6a	cdsp	CDSP.HT.2.5.c4-00004-KODIAK-1
 
 # Arduino Monza
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	qcs8300/Arduino/Monza/dsp/adsp
-Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/cdsp	qcs8300/Arduino/Monza/dsp/cdsp
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	qcs8300/Arduino/Monza/dsp/gdsp0
+Reuse: qcs8300/Arduino/Monza	adsp	sa8775p/Qualcomm/SA8775P-RIDE
+Reuse: qcs8300/Arduino/Monza	cdsp	qcs8300/Qualcomm/QCS8300-RIDE
+Reuse: qcs8300/Arduino/Monza	gdsp0	sa8775p/Qualcomm/SA8775P-RIDE
 
 # IQ8275 EVK
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/adsp
-Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/cdsp	qcs8300/Qualcomm/IQ8275-EVK/dsp/cdsp
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	qcs8300/Qualcomm/IQ8275-EVK/dsp/gdsp0
+Reuse: qcs8300/Qualcomm/IQ8275-EVK	adsp	sa8775p/Qualcomm/SA8775P-RIDE
+Reuse: qcs8300/Qualcomm/IQ8275-EVK	cdsp	qcs8300/Qualcomm/QCS8300-RIDE
+Reuse: qcs8300/Qualcomm/IQ8275-EVK	gdsp0	sa8775p/Qualcomm/SA8775P-RIDE
 
 # Monaco Draco EVK
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	qcs8300/Qualcomm/Monaco-Draco-EVK/dsp/adsp
-Link: qcs8300/Qualcomm/QCS8300-RIDE/dsp/cdsp	qcs8300/Qualcomm/Monaco-Draco-EVK/dsp/cdsp
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	qcs8300/Qualcomm/Monaco-Draco-EVK/dsp/gdsp0
+Reuse: qcs8300/Qualcomm/Monaco-Draco-EVK	adsp	sa8775p/Qualcomm/SA8775P-RIDE
+Reuse: qcs8300/Qualcomm/Monaco-Draco-EVK	cdsp	qcs8300/Qualcomm/QCS8300-RIDE
+Reuse: qcs8300/Qualcomm/Monaco-Draco-EVK	gdsp0	sa8775p/Qualcomm/SA8775P-RIDE
 
 # QCS8300 RIDE
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	qcs8300/Qualcomm/QCS8300-RIDE/dsp/adsp
+Reuse: qcs8300/Qualcomm/QCS8300-RIDE	adsp	sa8775p/Qualcomm/SA8775P-RIDE
 Install: qcs8300/Qualcomm/QCS8300-RIDE	cdsp	cdsp-DSP.AT.1.0.1-00204-LEMANS-1
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	qcs8300/Qualcomm/QCS8300-RIDE/dsp/gdsp0
+Reuse: qcs8300/Qualcomm/QCS8300-RIDE	gdsp0	sa8775p/Qualcomm/SA8775P-RIDE
 
 # RB2
 Install: qrb4210/Thundercomm/RB2	adsp	ADSP.VT.5.4.1.c4-00013-KAMORTA-1
 Install: qrb4210/Thundercomm/RB2	cdsp	CDSP.VT.2.4.1-00269-KAMORTA-1
 
 # IQ9075 EVK
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	sa8775p/Qualcomm/IQ9075-EVK/dsp/adsp
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp	sa8775p/Qualcomm/IQ9075-EVK/dsp/cdsp
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp1	sa8775p/Qualcomm/IQ9075-EVK/dsp/cdsp1
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	sa8775p/Qualcomm/IQ9075-EVK/dsp/gdsp0
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp1	sa8775p/Qualcomm/IQ9075-EVK/dsp/gdsp1
+Reuse: sa8775p/Qualcomm/IQ9075-EVK	adsp	sa8775p/Qualcomm/SA8775P-RIDE
+Reuse: sa8775p/Qualcomm/IQ9075-EVK	cdsp	sa8775p/Qualcomm/SA8775P-RIDE
+Reuse: sa8775p/Qualcomm/IQ9075-EVK	cdsp1	sa8775p/Qualcomm/SA8775P-RIDE
+Reuse: sa8775p/Qualcomm/IQ9075-EVK	gdsp0	sa8775p/Qualcomm/SA8775P-RIDE
+Reuse: sa8775p/Qualcomm/IQ9075-EVK	gdsp1	sa8775p/Qualcomm/SA8775P-RIDE
 
 # SA8775P Draco EVK
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/adsp	sa8775p/Qualcomm/Lemans-Draco-EVK/dsp/adsp
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp	sa8775p/Qualcomm/Lemans-Draco-EVK/dsp/cdsp
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/cdsp1	sa8775p/Qualcomm/Lemans-Draco-EVK/dsp/cdsp1
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp0	sa8775p/Qualcomm/Lemans-Draco-EVK/dsp/gdsp0
-Link: sa8775p/Qualcomm/SA8775P-RIDE/dsp/gdsp1	sa8775p/Qualcomm/Lemans-Draco-EVK/dsp/gdsp1
+Reuse: sa8775p/Qualcomm/Lemans-Draco-EVK	adsp	sa8775p/Qualcomm/SA8775P-RIDE
+Reuse: sa8775p/Qualcomm/Lemans-Draco-EVK	cdsp	sa8775p/Qualcomm/SA8775P-RIDE
+Reuse: sa8775p/Qualcomm/Lemans-Draco-EVK	cdsp1	sa8775p/Qualcomm/SA8775P-RIDE
+Reuse: sa8775p/Qualcomm/Lemans-Draco-EVK	gdsp0	sa8775p/Qualcomm/SA8775P-RIDE
+Reuse: sa8775p/Qualcomm/Lemans-Draco-EVK	gdsp1	sa8775p/Qualcomm/SA8775P-RIDE
 
 # SA8775P RIDE
 Install: sa8775p/Qualcomm/SA8775P-RIDE	adsp	adsp-DSP.AT.1.0.1-00205-LEMANS-1
@@ -119,8 +119,8 @@ Install: sa8775p/Qualcomm/SA8775P-RIDE	gdsp0	gdsp0-DSP.AT.1.0.1-00204-LEMANS-1
 Install: sa8775p/Qualcomm/SA8775P-RIDE	gdsp1	gdsp1-DSP.AT.1.0.1-00204-LEMANS-1
 
 # SDM845-HDK uses RB3 firmware (from linux-firmware) for adsp and cdsp
-Link: sdm845/Thundercomm/db845c/dsp/adsp	sdm845/Qualcomm/SDM845-HDK/dsp/adsp
-Link: sdm845/Thundercomm/db845c/dsp/cdsp	sdm845/Qualcomm/SDM845-HDK/dsp/cdsp
+Reuse: sdm845/Qualcomm/SDM845-HDK	adsp	sdm845/Thundercomm/db845c
+Reuse: sdm845/Qualcomm/SDM845-HDK	cdsp	sdm845/Thundercomm/db845c
 
 # Dragonboard 845c aka RB3
 Install: sdm845/Thundercomm/db845c	adsp	ADSP.HT.4.0-00593-SDM845-1
@@ -128,13 +128,13 @@ Install: sdm845/Thundercomm/db845c	cdsp	CDSP.HT.1.0-00559-SDM845-1
 Install: sdm845/Thundercomm/db845c	sdsp	SLPI.HY.1.0-00365-SDM845AZL-1
 
 # Shikra CQM EVK
-Link: shikra/Qualcomm/Shikra-CQS-EVK/dsp/cdsp	shikra/Qualcomm/Shikra-CQM-EVK/dsp/cdsp
+Reuse: shikra/Qualcomm/Shikra-CQM-EVK	cdsp	shikra/Qualcomm/Shikra-CQS-EVK
 
 # Shikra CQS EVK
 Install: shikra/Qualcomm/Shikra-CQS-EVK	cdsp	CDSP.VT.2.4.3-00124-SHIKRA-2
 
 # Shikra IQS EVK
-Link: shikra/Qualcomm/Shikra-CQS-EVK/dsp/cdsp	shikra/Qualcomm/Shikra-IQS-EVK/dsp/cdsp
+Reuse: shikra/Qualcomm/Shikra-IQS-EVK	cdsp	shikra/Qualcomm/Shikra-CQS-EVK
 
 # RB5
 Install: sm8250/Thundercomm/RB5		adsp	ADSP.HT.5.3.c2-00082-SM8250-1
@@ -150,5 +150,5 @@ Install: x1e80100/Qualcomm/Hamoa-IoT-EVK	adsp	ADSP.HT.5.9.c7-00004-HAMOA-1
 Install: x1e80100/Qualcomm/Hamoa-IoT-EVK	cdsp	CDSP.HT.2.9.c1-00094-HAMOA-1
 
 # Purwa IoT EVK
-Link: x1e80100/Qualcomm/Hamoa-IoT-EVK/dsp/adsp	x1p42100/Qualcomm/Purwa-IoT-EVK/dsp/adsp
-Link: x1e80100/Qualcomm/Hamoa-IoT-EVK/dsp/cdsp	x1p42100/Qualcomm/Purwa-IoT-EVK/dsp/cdsp
+Reuse: x1p42100/Qualcomm/Purwa-IoT-EVK	adsp	x1e80100/Qualcomm/Hamoa-IoT-EVK
+Reuse: x1p42100/Qualcomm/Purwa-IoT-EVK	cdsp	x1e80100/Qualcomm/Hamoa-IoT-EVK
