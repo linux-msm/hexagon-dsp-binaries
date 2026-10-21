@@ -39,7 +39,7 @@ do
 	"Install:" )
 		do_install ${DST} ${rest}
 		;;
-	"Link:" )
+	"Link:" | "Reuse:" )
 		# ignore
 		;;
 	"*" )

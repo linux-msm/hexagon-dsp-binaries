@@ -44,11 +44,14 @@ WHENCE file documents orignal locations for the tarballs with the library files.
    place a new block accordingly.
 3. Add an `Install:` line to `config.txt` referencing the new path. Each
    `config.txt` section, headed by a comment, describes one board: the
-   `Install:` lines for its DSPs and the `Link:` lines pointing to binaries
-   installed for another board. Sections are sorted by the board path (the
-   first column of `Install:` lines, the destination of `Link:` lines), and
-   lines within a section are sorted by DSP. Every `Link:` target must be
-   installed by an `Install:` line.
+   `Install: <board> <DSP> <release>` lines for its DSPs and the
+   `Reuse: <board> <DSP> <source board>` lines for the DSPs using binaries
+   installed for another board. The older
+   `Link: <source board>/dsp/<DSP> <board>/dsp/<DSP>` lines are equivalent
+   to `Reuse:` ones. Sections are sorted by the board path (the destination
+   of `Link:` lines), and lines within a section are sorted by DSP. The DSP
+   of the source board of every `Reuse:` and `Link:` line must be installed
+   by an `Install:` line.
 4. Run `make check` to validate the new entries.
 
 ## Validating against an installed linux-firmware tree

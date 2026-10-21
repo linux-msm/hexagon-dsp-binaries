@@ -66,6 +66,11 @@ do_link() {
 	ln -sr -T "${target}" "${link}"
 }
 
+# dest board DSP source-board
+do_reuse() {
+	do_link "$1" "$4/dsp/$3" "$2/dsp/$3"
+}
+
 grep -v '^#\|^$' "${CFG}" | while read verb rest
 do
 	case ${verb} in
@@ -74,6 +79,9 @@ do
 		;;
 	"Link:" )
 		do_link ${DST} ${rest}
+		;;
+	"Reuse:" )
+		do_reuse ${DST} ${rest}
 		;;
 	* )
 		echo "Unsupported clause ${verb}" >&2

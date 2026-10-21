@@ -98,6 +98,7 @@ def load_config():
         pattern_empty = re.compile("^#|^$")
         pattern_install = re.compile("Install: ([^ \t]+)[ \t]+([^ \t]+)[ \t]+([^ \t]+)\n")
         pattern_link = re.compile("Link: ([^ \t]+)[ \t]+([^ \t]+)\n")
+        pattern_reuse = re.compile("Reuse: ([^ \t]+)[ \t]+([^ \t]+)[ \t]+([^ \t]+)\n")
 
         for (lineno, line) in enumerate(file, start=1):
             if pattern_empty.match(line):
@@ -111,6 +112,11 @@ def load_config():
             match = pattern_link.match(line)
             if match:
                 yield ("link", lineno, *match.groups())
+                continue
+
+            match = pattern_reuse.match(line)
+            if match:
+                yield ("reuse", lineno, *match.groups())
                 continue
 
             raise Exception("config.txt: %d: failed to parse '%s'" % (lineno, line[:-1]))
@@ -164,6 +170,24 @@ def check_link_config(data):
 
     return ret
 
+def check_reuse_config(data):
+    (lineno, path, dsp, source) = data
+    ret = True
+
+    if path.endswith("/"):
+        sys.stderr.write("config.txt: %d: trailing '/' in %s\n" % (lineno, path))
+        ret = False
+
+    if source.endswith("/"):
+        sys.stderr.write("config.txt: %d: trailing '/' in %s\n" % (lineno, source))
+        ret = False
+
+    if dsp not in DSPS:
+        sys.stderr.write("config.txt: %d: unknown DSP type '%s'\n" % (lineno, dsp))
+        ret = False
+
+    return ret
+
 def check_config(data, dirs):
     ret = True
 
@@ -171,6 +195,8 @@ def check_config(data, dirs):
        ret = check_install_config(data[1:], dirs)
     elif data[0] == "link":
        ret = check_link_config(data[1:])
+    elif data[0] == "reuse":
+       ret = check_reuse_config(data[1:])
 
     return ret
 
@@ -283,8 +309,8 @@ def check_config_sorted(config_data):
     ret = True
     prev = None
     for data in config_data:
-        if data[0] == "install":
-            (lineno, path, dsp, subdir) = data[1:]
+        if data[0] in ("install", "reuse"):
+            (lineno, path, dsp, _) = data[1:]
             key = (path, dsp)
         else:
             (lineno, src_path, dst_path) = data[1:]
@@ -299,7 +325,7 @@ def check_config_sorted(config_data):
     return ret
 
 def check_links_installed(config_data):
-    """Check that every Link: target is installed by an Install: line."""
+    """Check that every Link: and Reuse: target is installed by an Install: line."""
     installed = set()
     for data in config_data:
         if data[0] == "install":
@@ -312,6 +338,11 @@ def check_links_installed(config_data):
             (lineno, src_path, dst_path) = data[1:]
             if src_path not in installed:
                 sys.stderr.write("config.txt: %d: link target '%s' is not installed\n" % (lineno, src_path))
+                ret = False
+        elif data[0] == "reuse":
+            (lineno, path, dsp, source) = data[1:]
+            if "%s/dsp/%s" % (source, dsp) not in installed:
+                sys.stderr.write("config.txt: %d: %s of %s is not installed\n" % (lineno, dsp, source))
                 ret = False
 
     return ret
@@ -329,6 +360,12 @@ def check_config_against_machine_paths(config_data, machine_paths):
             (lineno, path, dsp, subdir) = data[1:]
             if path not in machine_paths and path not in reported_paths:
                 sys.stderr.write("config.txt: %d: Install path '%s' not found in YAML configs\n" % (lineno, path))
+                reported_paths.add(path)
+                ret = False
+        elif data[0] == "reuse":
+            (lineno, path, dsp, source) = data[1:]
+            if path not in machine_paths and path not in reported_paths:
+                sys.stderr.write("config.txt: %d: Reuse path '%s' not found in YAML configs\n" % (lineno, path))
                 reported_paths.add(path)
                 ret = False
         elif data[0] == "link":

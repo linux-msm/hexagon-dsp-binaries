@@ -4,6 +4,7 @@
 
 # Format
 # Install: subdir			DSP	QC_IMAGE_VERSION_STRING
+# Reuse: subdir				DSP	source subdir
 # Link: target				source
 
 # Dragonboard 820c
