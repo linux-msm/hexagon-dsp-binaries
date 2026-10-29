@@ -308,7 +308,12 @@ Licence: LICENSE.qcom-2
 Status: Redistributable
 
 --------------------------------------------------------------------------
+Dir: shikra/Qualcomm/Shikra-CQS-EVK/CDSP.VT.2.4.3-00124-SHIKRA-2
+Device: Qualcomm Technologies, Inc. Shikra CQS EVK
+Licence: LICENSE.qcom-2
+Status: Redistributable
 
+--------------------------------------------------------------------------
 Dir: sm8250/Thundercomm/RB5/ADSP.HT.5.3.c2-00055-SM8250-2
 Dir: sm8250/Thundercomm/RB5/CDSP.HT.2.3.c1-00044-SM8250-2
 Device: Thundercomm / Qualcomm Robotics RB5 Platform

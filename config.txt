@@ -126,7 +126,7 @@ Install: sdm845/Thundercomm/db845c	sdsp	SLPI.HY.1.0-00365-SDM845AZL-1
 Link: shikra/Qualcomm/Shikra-CQS-EVK/dsp/cdsp	shikra/Qualcomm/Shikra-CQM-EVK/dsp/cdsp
 
 # Shikra CQS EVK
-Install: shikra/Qualcomm/Shikra-CQS-EVK	cdsp	CDSP.VT.2.4.3-00088-SHIKRA-1
+Install: shikra/Qualcomm/Shikra-CQS-EVK	cdsp	CDSP.VT.2.4.3-00124-SHIKRA-2
 
 # Shikra IQS EVK
 Link: shikra/Qualcomm/Shikra-CQS-EVK/dsp/cdsp	shikra/Qualcomm/Shikra-IQS-EVK/dsp/cdsp
