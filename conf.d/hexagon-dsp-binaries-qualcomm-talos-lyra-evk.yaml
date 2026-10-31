@@ -1,8 +1,0 @@
-# SPDX-License-Identifier: MIT
-# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
-# yaml-language-server: $schema=schema.json
-machines:
-  Qualcomm Technologies, Inc. QCS615 Talos Lyra EVK:
-    DSP_LIBRARY_PATH: qcs615/Qualcomm/Talos-Lyra-EVK/dsp
-    ADSP_ARCH: v66
-    CDSP_ARCH: v66

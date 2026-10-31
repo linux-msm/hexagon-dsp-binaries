@@ -39,7 +39,7 @@ do
 	"Install:" )
 		do_install ${DST} ${rest}
 		;;
-	"Link:" )
+	"Reuse:" )
 		# ignore
 		;;
 	"*" )
@@ -53,9 +53,7 @@ do
 	[ -r "${DST}/$licence" ] || install -m 0644 $licence "${DST}"
 done
 
-install -d ${DST}/conf.d
-install -m 0644 conf.d/*.yaml ${DST}/conf.d/
-install -m 0644 conf.d/schema.json ${DST}/conf.d/
+install -m 0644 schema.json ${DST}
 
 install -d ${DST}/scripts
 install -m 0755 scripts/*.sh scripts/*.py ${DST}/scripts/
