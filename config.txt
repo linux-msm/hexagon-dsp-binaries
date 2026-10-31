@@ -8,97 +8,131 @@
 # Install: subdir			DSP	QC_IMAGE_VERSION_STRING
 # Reuse: subdir				DSP	source subdir
 
+# Dragonboard 410c
+Machine: apq8016/Qualcomm/db410c	Qualcomm Technologies, Inc. APQ 8016 SBC
+Arch: apq8016/Qualcomm/db410c	adsp	v5
+
 # Dragonboard 820c
+Machine: apq8096/Qualcomm/db820c	Qualcomm Technologies, Inc. DB820c
+Arch: apq8096/Qualcomm/db820c	adsp	v60
+Arch: apq8096/Qualcomm/db820c	sdsp	v60
 Install: apq8096/Qualcomm/db820c	adsp	ADSP.8996.2.7.1-00138
 
 # ELIZA CQS EVK
+Machine: eliza/Qualcomm/Eliza-CQS-EVK	Qualcomm Technologies, Inc. Eliza CQS EVK
 Reuse: eliza/Qualcomm/Eliza-CQS-EVK	adsp	eliza/Qualcomm/Eliza-MTP
 Reuse: eliza/Qualcomm/Eliza-CQS-EVK	cdsp	eliza/Qualcomm/Eliza-MTP
 
 # ELIZA MTP
+Machine: eliza/Qualcomm/Eliza-MTP	Qualcomm Technologies, Inc. Eliza MTP
 Install: eliza/Qualcomm/Eliza-MTP	adsp	LPAIDSP.HT.1.2.c2-00064-PAKALA-3
 Install: eliza/Qualcomm/Eliza-MTP	cdsp	CDSP.HT.3.1-00889-PAKALA-1
 
 # Glymur CRD
+Machine: glymur/Qualcomm/Glymur-CRD	Qualcomm Technologies, Inc. Glymur CRD
 Install: glymur/Qualcomm/Glymur-CRD	adsp	LPAIDSP.HT.1.6.2-00064-GLYMUR-1
 Install: glymur/Qualcomm/Glymur-CRD	cdsp	CDSP.HT.3.3-00315-GLYMUR-1
 
 # HAWI MTP
+Machine: hawi/Qualcomm/Hawi-MTP	Qualcomm Technologies, Inc. Hawi MTP
 Install: hawi/Qualcomm/Hawi-MTP	adsp	LPAIDSP.HT.1.6-00701.4-HAWI-3
 Install: hawi/Qualcomm/Hawi-MTP	cdsp	CDSP.HT.3.6-00501.6-HAWI-1
 
 # KAANAPALI MTP
+Machine: kaanapali/Qualcomm/Kaanapali-MTP	Qualcomm Technologies, Inc. Kaanapali MTP
 Install: kaanapali/Qualcomm/Kaanapali-MTP	adsp	LPAIDSP.HT.1.6.1-00035-KAANAPALI-1
 Install: kaanapali/Qualcomm/Kaanapali-MTP	cdsp	CDSP.HT.3.2.c1-00001-KAANAPALI-3
 
 # Mahua CRD
+Machine: mahua/Qualcomm/Mahua-CRD	Qualcomm Technologies, Inc. Mahua CRD
 Reuse: mahua/Qualcomm/Mahua-CRD	adsp	glymur/Qualcomm/Glymur-CRD
 Reuse: mahua/Qualcomm/Mahua-CRD	cdsp	glymur/Qualcomm/Glymur-CRD
 
 # MAILI MTP
+Machine: maili/Qualcomm/Maili-MTP	Qualcomm Technologies, Inc. Maili MTP
 Install: maili/Qualcomm/Maili-MTP	adsp	LPAIDSP.HT.1.6-00701.4-HAWI-3
 Reuse: maili/Qualcomm/Maili-MTP	cdsp	hawi/Qualcomm/Hawi-MTP
 
 # SA8797P Ride Embedded
+Machine: nord/Qualcomm/SA8797P-Ride-Embedded	Qualcomm Technologies, Inc. SA8797P Ride Embedded
 Install: nord/Qualcomm/SA8797P-Ride-Embedded	adsp	adsp-HPASS.AT.1.0.1-00003-NORD-6
 Install: nord/Qualcomm/SA8797P-Ride-Embedded	adsp1	adsp1-HPASS.AT.1.0.1-00003-NORD-6
 Install: nord/Qualcomm/SA8797P-Ride-Embedded	cdsp	cdsp-NSP.AT.1.0-00579-NORD-1
 
 # Arduino Imola
+Machine: qcm2290/Arduino/Imola	Arduino UnoQ
 Reuse: qcm2290/Arduino/Imola	adsp	qcm2290/Thundercomm/RB1
 
 # RB1
+Machine: qcm2290/Thundercomm/RB1	Qualcomm Technologies, Inc. Robotics RB1
 Install: qcm2290/Thundercomm/RB1	adsp	ADSP.VT.5.4.1.c4-00013-KAMORTA-1
 
 # QCM6490 IDP
+Machine: qcm6490/Qualcomm/QCM6490-IDP	Qualcomm Technologies, Inc. QCM6490 IDP
 Reuse: qcm6490/Qualcomm/QCM6490-IDP	adsp	qcm6490/Thundercomm/RB3gen2
 Reuse: qcm6490/Qualcomm/QCM6490-IDP	cdsp	qcm6490/Thundercomm/RB3gen2
 
 # RB3gen2
+Machine: qcm6490/Thundercomm/RB3gen2	Qualcomm Technologies, Inc. Robotics RB3gen2
 Install: qcm6490/Thundercomm/RB3gen2	adsp	ADSP.HT.5.5.c8-00256.2-KODIAK-1
 Install: qcm6490/Thundercomm/RB3gen2	cdsp	CDSP.HT.2.5.c3-00134-KODIAK-1
 
 # QCS615 RIDE
+Machine: qcs615/Qualcomm/QCS615-RIDE	Qualcomm QCS615 IQ 615 EVK
+Machine: qcs615/Qualcomm/QCS615-RIDE	Qualcomm Technologies, Inc. QCS615 Ride (IQ-615 Beta EVK)
+Arch: qcs615/Qualcomm/QCS615-RIDE	adsp	v66
+Arch: qcs615/Qualcomm/QCS615-RIDE	cdsp	v66
 Install: qcs615/Qualcomm/QCS615-RIDE	adsp	ADSP.VT.5.2.c6-00095-SM6150-8
 Install: qcs615/Qualcomm/QCS615-RIDE	cdsp	CDSP.VT.2.2.c4-00019-SM6150-1
 
 # QCS615 Talos Lyra EVK
+Machine: qcs615/Qualcomm/Talos-Lyra-EVK	Qualcomm Technologies, Inc. QCS615 Talos Lyra EVK
+Arch: qcs615/Qualcomm/Talos-Lyra-EVK	adsp	v66
+Arch: qcs615/Qualcomm/Talos-Lyra-EVK	cdsp	v66
 Reuse: qcs615/Qualcomm/Talos-Lyra-EVK	adsp	qcs615/Qualcomm/QCS615-RIDE
 Reuse: qcs615/Qualcomm/Talos-Lyra-EVK	cdsp	qcs615/Qualcomm/QCS615-RIDE
 
 # Thundercomm RUBIK Pi 3
+Machine: qcs6490/Thundercomm/RubikPi3	Thundercomm RUBIK Pi 3
 Install: qcs6490/Thundercomm/RubikPi3	adsp	ADSP.HT.5.5.c8-00256.2-KODIAK-1
 Reuse: qcs6490/Thundercomm/RubikPi3	cdsp	qcm6490/Thundercomm/RB3gen2
 
 # Radxa Dragon Q6A
+Machine: qcs6490/radxa/dragon-q6a	Radxa Dragon Q6A
 Install: qcs6490/radxa/dragon-q6a	adsp	ADSP.HT.5.5.c9-00028-KODIAK-2
 Install: qcs6490/radxa/dragon-q6a	cdsp	CDSP.HT.2.5.c4-00004-KODIAK-1
 
 # Arduino Monza
+Machine: qcs8300/Arduino/Monza	Arduino VENTUNO Q
 Reuse: qcs8300/Arduino/Monza	adsp	sa8775p/Qualcomm/SA8775P-RIDE
 Reuse: qcs8300/Arduino/Monza	cdsp	qcs8300/Qualcomm/QCS8300-RIDE
 Reuse: qcs8300/Arduino/Monza	gdsp0	sa8775p/Qualcomm/SA8775P-RIDE
 
 # IQ8275 EVK
+Machine: qcs8300/Qualcomm/IQ8275-EVK	Qualcomm Technologies, Inc. Monaco EVK
 Reuse: qcs8300/Qualcomm/IQ8275-EVK	adsp	sa8775p/Qualcomm/SA8775P-RIDE
 Reuse: qcs8300/Qualcomm/IQ8275-EVK	cdsp	qcs8300/Qualcomm/QCS8300-RIDE
 Reuse: qcs8300/Qualcomm/IQ8275-EVK	gdsp0	sa8775p/Qualcomm/SA8775P-RIDE
 
 # Monaco Draco EVK
+Machine: qcs8300/Qualcomm/Monaco-Draco-EVK	Qualcomm Technologies, Inc. Monaco Draco EVK
 Reuse: qcs8300/Qualcomm/Monaco-Draco-EVK	adsp	sa8775p/Qualcomm/SA8775P-RIDE
 Reuse: qcs8300/Qualcomm/Monaco-Draco-EVK	cdsp	qcs8300/Qualcomm/QCS8300-RIDE
 Reuse: qcs8300/Qualcomm/Monaco-Draco-EVK	gdsp0	sa8775p/Qualcomm/SA8775P-RIDE
 
 # QCS8300 RIDE
+Machine: qcs8300/Qualcomm/QCS8300-RIDE	Qualcomm Technologies, Inc. QCS8300 Ride
 Reuse: qcs8300/Qualcomm/QCS8300-RIDE	adsp	sa8775p/Qualcomm/SA8775P-RIDE
 Install: qcs8300/Qualcomm/QCS8300-RIDE	cdsp	cdsp-DSP.AT.1.0.1-00204-LEMANS-1
 Reuse: qcs8300/Qualcomm/QCS8300-RIDE	gdsp0	sa8775p/Qualcomm/SA8775P-RIDE
 
 # RB2
+Machine: qrb4210/Thundercomm/RB2	Qualcomm Technologies, Inc. QRB4210 RB2
 Install: qrb4210/Thundercomm/RB2	adsp	ADSP.VT.5.4.1.c4-00013-KAMORTA-1
 Install: qrb4210/Thundercomm/RB2	cdsp	CDSP.VT.2.4.1-00269-KAMORTA-1
 
 # IQ9075 EVK
+Machine: sa8775p/Qualcomm/IQ9075-EVK	Qualcomm Technologies, Inc. Lemans EVK
 Reuse: sa8775p/Qualcomm/IQ9075-EVK	adsp	sa8775p/Qualcomm/SA8775P-RIDE
 Reuse: sa8775p/Qualcomm/IQ9075-EVK	cdsp	sa8775p/Qualcomm/SA8775P-RIDE
 Reuse: sa8775p/Qualcomm/IQ9075-EVK	cdsp1	sa8775p/Qualcomm/SA8775P-RIDE
@@ -106,6 +140,7 @@ Reuse: sa8775p/Qualcomm/IQ9075-EVK	gdsp0	sa8775p/Qualcomm/SA8775P-RIDE
 Reuse: sa8775p/Qualcomm/IQ9075-EVK	gdsp1	sa8775p/Qualcomm/SA8775P-RIDE
 
 # SA8775P Draco EVK
+Machine: sa8775p/Qualcomm/Lemans-Draco-EVK	Qualcomm Technologies, Inc. Lemans Draco EVK
 Reuse: sa8775p/Qualcomm/Lemans-Draco-EVK	adsp	sa8775p/Qualcomm/SA8775P-RIDE
 Reuse: sa8775p/Qualcomm/Lemans-Draco-EVK	cdsp	sa8775p/Qualcomm/SA8775P-RIDE
 Reuse: sa8775p/Qualcomm/Lemans-Draco-EVK	cdsp1	sa8775p/Qualcomm/SA8775P-RIDE
@@ -113,6 +148,10 @@ Reuse: sa8775p/Qualcomm/Lemans-Draco-EVK	gdsp0	sa8775p/Qualcomm/SA8775P-RIDE
 Reuse: sa8775p/Qualcomm/Lemans-Draco-EVK	gdsp1	sa8775p/Qualcomm/SA8775P-RIDE
 
 # SA8775P RIDE
+Machine: sa8775p/Qualcomm/SA8775P-RIDE	Qualcomm SA8775P Ride
+Machine: sa8775p/Qualcomm/SA8775P-RIDE	Qualcomm SA8775P Ride Rev3
+Machine: sa8775p/Qualcomm/SA8775P-RIDE	Qualcomm Technologies, Inc. Lemans Ride
+Machine: sa8775p/Qualcomm/SA8775P-RIDE	Qualcomm Technologies, Inc. Lemans Ride Rev3
 Install: sa8775p/Qualcomm/SA8775P-RIDE	adsp	adsp-DSP.AT.1.0.1-00205-LEMANS-1
 Install: sa8775p/Qualcomm/SA8775P-RIDE	cdsp	cdsp-DSP.AT.1.0.1-00204-LEMANS-1
 Install: sa8775p/Qualcomm/SA8775P-RIDE	cdsp1	cdsp1-DSP.AT.1.0.1-00204-LEMANS-1
@@ -120,36 +159,48 @@ Install: sa8775p/Qualcomm/SA8775P-RIDE	gdsp0	gdsp0-DSP.AT.1.0.1-00204-LEMANS-1
 Install: sa8775p/Qualcomm/SA8775P-RIDE	gdsp1	gdsp1-DSP.AT.1.0.1-00204-LEMANS-1
 
 # SDM845-HDK uses RB3 firmware (from linux-firmware) for adsp and cdsp
+Machine: sdm845/Qualcomm/SDM845-HDK	Qualcomm Technologies, Inc. SDM845 HDK
 Reuse: sdm845/Qualcomm/SDM845-HDK	adsp	sdm845/Thundercomm/db845c
 Reuse: sdm845/Qualcomm/SDM845-HDK	cdsp	sdm845/Thundercomm/db845c
 
 # Dragonboard 845c aka RB3
+Machine: sdm845/Thundercomm/db845c	Thundercomm Dragonboard 845c
+Arch: sdm845/Thundercomm/db845c	adsp	v65
+Arch: sdm845/Thundercomm/db845c	cdsp	v65
+Arch: sdm845/Thundercomm/db845c	sdsp	v65
 Install: sdm845/Thundercomm/db845c	adsp	ADSP.HT.4.0-00593-SDM845-1
 Install: sdm845/Thundercomm/db845c	cdsp	CDSP.HT.1.0-00559-SDM845-1
 Install: sdm845/Thundercomm/db845c	sdsp	SLPI.HY.1.0-00365-SDM845AZL-1
 
 # Shikra CQM EVK
+Machine: shikra/Qualcomm/Shikra-CQM-EVK	Qualcomm Technologies, Inc. Shikra CQM EVK
 Reuse: shikra/Qualcomm/Shikra-CQM-EVK	cdsp	shikra/Qualcomm/Shikra-CQS-EVK
 
 # Shikra CQS EVK
+Machine: shikra/Qualcomm/Shikra-CQS-EVK	Qualcomm Technologies, Inc. Shikra CQS EVK
 Install: shikra/Qualcomm/Shikra-CQS-EVK	cdsp	CDSP.VT.2.4.3-00124-SHIKRA-2
 
 # Shikra IQS EVK
+Machine: shikra/Qualcomm/Shikra-IQS-EVK	Qualcomm Technologies, Inc. Shikra IQS EVK
 Reuse: shikra/Qualcomm/Shikra-IQS-EVK	cdsp	shikra/Qualcomm/Shikra-CQS-EVK
 
 # RB5
+Machine: sm8250/Thundercomm/RB5	Qualcomm Technologies, Inc. Robotics RB5
 Install: sm8250/Thundercomm/RB5		adsp	ADSP.HT.5.3.c2-00082-SM8250-1
 Install: sm8250/Thundercomm/RB5		cdsp	CDSP.HT.2.3.c1-00076-SM8250-1
 Install: sm8250/Thundercomm/RB5		sdsp	SLPI.HY.3.1-00049-SM8250AZL-2
 
 # SM8750 MTP
+Machine: sm8750/Qualcomm/SM8750-MTP	Qualcomm Technologies, Inc. SM8750 MTP
 Install: sm8750/Qualcomm/SM8750-MTP	adsp	LPAIDSP.HT.1.2.c2-00021-PAKALA-1
 Install: sm8750/Qualcomm/SM8750-MTP	cdsp	CDSP.HT.3.1-00889-PAKALA-1
 
 # Hamoa IoT EVK
+Machine: x1e80100/Qualcomm/Hamoa-IoT-EVK	Qualcomm Technologies, Inc. Hamoa IoT EVK
 Install: x1e80100/Qualcomm/Hamoa-IoT-EVK	adsp	ADSP.HT.5.9.c7-00004-HAMOA-1
 Install: x1e80100/Qualcomm/Hamoa-IoT-EVK	cdsp	CDSP.HT.2.9.c1-00094-HAMOA-1
 
 # Purwa IoT EVK
+Machine: x1p42100/Qualcomm/Purwa-IoT-EVK	Qualcomm Technologies, Inc. Purwa IoT EVK
 Reuse: x1p42100/Qualcomm/Purwa-IoT-EVK	adsp	x1e80100/Qualcomm/Hamoa-IoT-EVK
 Reuse: x1p42100/Qualcomm/Purwa-IoT-EVK	cdsp	x1e80100/Qualcomm/Hamoa-IoT-EVK

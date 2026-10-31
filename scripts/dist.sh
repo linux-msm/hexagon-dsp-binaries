@@ -54,7 +54,6 @@ do
 done
 
 install -d ${DST}/conf.d
-install -m 0644 conf.d/*.yaml ${DST}/conf.d/
 install -m 0644 conf.d/schema.json ${DST}/conf.d/
 
 install -d ${DST}/scripts
