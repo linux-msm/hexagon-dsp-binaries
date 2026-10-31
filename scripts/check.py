@@ -98,6 +98,8 @@ def load_config():
         pattern_empty = re.compile("^#|^$")
         pattern_install = re.compile("Install: ([^ \t]+)[ \t]+([^ \t]+)[ \t]+([^ \t]+)\n")
         pattern_reuse = re.compile("Reuse: ([^ \t]+)[ \t]+([^ \t]+)[ \t]+([^ \t]+)\n")
+        pattern_machine = re.compile("Machine: ([^ \t]+)[ \t]+([^\t\n]*[^ \t\n])\n")
+        pattern_arch = re.compile("Arch: ([^ \t]+)[ \t]+([^ \t]+)[ \t]+([^ \t]+)\n")
 
         for (lineno, line) in enumerate(file, start=1):
             if pattern_empty.match(line):
@@ -113,9 +115,20 @@ def load_config():
                 yield ("reuse", lineno, *match.groups())
                 continue
 
+            match = pattern_machine.match(line)
+            if match:
+                yield ("machine", lineno, *match.groups())
+                continue
+
+            match = pattern_arch.match(line)
+            if match:
+                yield ("arch", lineno, *match.groups())
+                continue
+
             raise Exception("config.txt: %d: failed to parse '%s'" % (lineno, line[:-1]))
 
 DSPS = [ "adsp", "adsp1", "cdsp", "sdsp", "cdsp1", "gdsp0", "gdsp1" ]
+ARCH_DSPS = [ "adsp", "cdsp", "mdsp", "sdsp" ]
 
 def check_install_config(data, dirs):
     (lineno, path, dsp, subdir) = data
@@ -158,6 +171,35 @@ def check_reuse_config(data):
 
     return ret
 
+def check_machine_config(data):
+    (lineno, path, name) = data
+    ret = True
+
+    if path.endswith("/"):
+        sys.stderr.write("config.txt: %d: trailing '/' in %s\n" % (lineno, path))
+        ret = False
+
+    # machine names are written to YAML files as double-quoted strings
+    if '"' in name or '\\' in name:
+        sys.stderr.write("config.txt: %d: unsupported character in machine name '%s'\n" % (lineno, name))
+        ret = False
+
+    return ret
+
+def check_arch_config(data):
+    (lineno, path, dsp, arch) = data
+    ret = True
+
+    if path.endswith("/"):
+        sys.stderr.write("config.txt: %d: trailing '/' in %s\n" % (lineno, path))
+        ret = False
+
+    if dsp not in ARCH_DSPS:
+        sys.stderr.write("config.txt: %d: unsupported DSP type '%s' for Arch:\n" % (lineno, dsp))
+        ret = False
+
+    return ret
+
 def check_config(data, dirs):
     ret = True
 
@@ -165,6 +207,10 @@ def check_config(data, dirs):
        ret = check_install_config(data[1:], dirs)
     elif data[0] == "reuse":
        ret = check_reuse_config(data[1:])
+    elif data[0] == "machine":
+       ret = check_machine_config(data[1:])
+    elif data[0] == "arch":
+       ret = check_arch_config(data[1:])
 
     return ret
 
@@ -272,20 +318,85 @@ def load_machine_dsp_paths():
 
     return paths if okay else None
 
+def config_key(data):
+    """Sort key of a config.txt entry.
+
+    Entries are sorted by board. For each board the Machine: entries come
+    first, followed by the Arch: ones and then by Install: and Reuse: ones,
+    each sorted by DSP.
+    """
+    if data[0] == "machine":
+        return (data[2], 0, "")
+    if data[0] == "arch":
+        return (data[2], 1, data[3])
+    return (data[2], 2, data[3])
+
 def check_config_sorted(config_data):
     """Check that config.txt entries are sorted by board and DSP."""
     ret = True
     prev = None
     for data in config_data:
-        (lineno, path, dsp, _) = data[1:]
-        key = (path, dsp)
-
-        if prev is not None and key < prev:
-            sys.stderr.write("config.txt: %d: entry for %s/dsp/%s is not sorted, should come before %s/dsp/%s\n" % (lineno, *key, *prev))
+        if prev is not None and config_key(data) < config_key(prev):
+            sys.stderr.write("config.txt: %d: entry for %s is not sorted, should come before line %d\n" % (data[1], data[2], prev[1]))
             ret = False
-        prev = key
+        prev = data
 
     return ret
+
+def config_machines(config_data):
+    """Return the target configuration described by config.txt.
+
+    The configuration is returned as a dict mapping each board to the
+    contents of its conf.d YAML file.
+    """
+    boards = {}
+    for data in config_data:
+        if data[0] == "machine":
+            (lineno, path, name) = data[1:]
+            boards.setdefault(path, {'machines': {}})['machines'][name] = \
+                {'DSP_LIBRARY_PATH': "%s/dsp" % path}
+
+    for data in config_data:
+        if data[0] == "arch":
+            (lineno, path, dsp, arch) = data[1:]
+            for machine in boards.get(path, {'machines': {}})['machines'].values():
+                machine["%s_ARCH" % dsp.upper()] = arch
+
+    return boards
+
+def check_config_machines(config_data):
+    """Check Machine: and Arch: entries; return the set of their boards."""
+    ret = True
+    names = {}
+    archs = set()
+
+    for data in config_data:
+        if data[0] == "machine":
+            (lineno, path, name) = data[1:]
+            if name in names:
+                sys.stderr.write("config.txt: %d: machine '%s' is already described on line %d\n" % (lineno, name, names[name]))
+                ret = False
+            names[name] = lineno
+
+    boards = config_machines(config_data)
+
+    for data in config_data:
+        if data[0] == "arch":
+            (lineno, path, dsp, arch) = data[1:]
+            if path not in boards:
+                sys.stderr.write("config.txt: %d: Arch: entry for %s without Machine: entries\n" % (lineno, path))
+                ret = False
+            if (path, dsp) in archs:
+                sys.stderr.write("config.txt: %d: duplicate Arch: entry for %s of %s\n" % (lineno, dsp, path))
+                ret = False
+            archs.add((path, dsp))
+
+    validator = jsonschema.Draft202012Validator(load_schema())
+    for (path, conf) in boards.items():
+        if not check_conf_against_schema("config.txt: %s" % path, conf, validator):
+            ret = False
+
+    return set(boards) if ret else None
 
 def check_reuse_installed(config_data):
     """Check that every Reuse: source is installed by an Install: line."""
@@ -317,13 +428,13 @@ def check_config_against_machine_paths(config_data, machine_paths):
         if data[0] == "install":
             (lineno, path, dsp, subdir) = data[1:]
             if path not in machine_paths and path not in reported_paths:
-                sys.stderr.write("config.txt: %d: Install path '%s' not found in YAML configs\n" % (lineno, path))
+                sys.stderr.write("config.txt: %d: Install path '%s' not found in Machine: entries or YAML configs\n" % (lineno, path))
                 reported_paths.add(path)
                 ret = False
         elif data[0] == "reuse":
             (lineno, path, dsp, source) = data[1:]
             if path not in machine_paths and path not in reported_paths:
-                sys.stderr.write("config.txt: %d: Reuse path '%s' not found in YAML configs\n" % (lineno, path))
+                sys.stderr.write("config.txt: %d: Reuse path '%s' not found in Machine: entries or YAML configs\n" % (lineno, path))
                 reported_paths.add(path)
                 ret = False
 
@@ -406,7 +517,7 @@ def main():
 
     # Load 00-hexagon-dsp-binaries.yaml for consistency checking
     machine_paths = load_machine_dsp_paths()
-    if not machine_paths:
+    if machine_paths is None:
         okay = False
 
     # Collect config data for consistency check
@@ -420,6 +531,17 @@ def main():
     except Exception as e:
         sys.stderr.write("%s\n" % e)
         okay = False
+
+    # Boards described by Machine: entries get their YAML configs
+    # generated at install time
+    config_paths = check_config_machines(config_data)
+    if config_paths is None:
+        okay = False
+    elif machine_paths is not None:
+        for path in sorted(config_paths & machine_paths):
+            sys.stderr.write("config.txt: %s is described by both Machine: entries and a YAML config\n" % path)
+            okay = False
+        machine_paths |= config_paths
 
     # Check config.txt paths against 00-hexagon-dsp-binaries.yaml
     if not check_config_against_machine_paths(config_data, machine_paths):

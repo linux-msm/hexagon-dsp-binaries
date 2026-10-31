@@ -3,6 +3,8 @@
 # Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 
 # Format
+# Machine: subdir			machine name
+# Arch: subdir				DSP	architecture
 # Install: subdir			DSP	QC_IMAGE_VERSION_STRING
 # Reuse: subdir				DSP	source subdir
 

@@ -66,6 +66,43 @@ do_reuse() {
 	ln -sr -T "${target}" "${link}"
 }
 
+# dest config
+# Generate conf.d/*.yaml target configuration from Machine: and Arch: entries
+do_conf() {
+	mkdir -p "$1/conf.d"
+
+	awk -v dst="$1/conf.d" '
+	$1 == "Machine:" {
+		name = $0
+		sub(/^Machine:[ \t]+[^ \t]+[ \t]+/, "", name)
+		if (!($2 in names))
+			boards[count++] = $2
+		names[$2] = names[$2] name "\n"
+	}
+	$1 == "Arch:" {
+		archs[$2] = archs[$2] "    " toupper($3) "_ARCH: " $4 "\n"
+	}
+	END {
+		for (i = 0; i < count; i++) {
+			board = boards[i]
+			file = board
+			sub(/^[^\/]*\//, "", file)
+			gsub(/\//, "-", file)
+			file = dst "/hexagon-dsp-binaries-" tolower(file) ".yaml"
+
+			printf "# SPDX-License-Identifier: MIT\n" > file
+			printf "# Generated from config.txt\n" > file
+			printf "# yaml-language-server: $schema=schema.json\n" > file
+			printf "machines:\n" > file
+			n = split(names[board], list, "\n")
+			for (j = 1; j < n; j++)
+				printf "  \"%s\":\n    DSP_LIBRARY_PATH: %s/dsp\n%s", \
+					list[j], board, archs[board] > file
+			close(file)
+		}
+	}' "$2"
+}
+
 grep -v '^#\|^$' "${CFG}" | while read verb rest
 do
 	case ${verb} in
@@ -75,8 +112,13 @@ do
 	"Reuse:" )
 		do_reuse ${DST} ${rest}
 		;;
+	"Machine:" | "Arch:" )
+		# handled by do_conf
+		;;
 	* )
 		echo "Unsupported clause ${verb}" >&2
 		exit 1
 	esac
 done
+
+do_conf "${DST}" "${CFG}"
