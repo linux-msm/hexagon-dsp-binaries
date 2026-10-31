@@ -60,6 +60,10 @@ Install: qcm6490/Thundercomm/RB3gen2	cdsp	CDSP.HT.2.5.c3-00134-KODIAK-1
 Install: qcs615/Qualcomm/QCS615-RIDE	adsp	ADSP.VT.5.2.c6-00095-SM6150-8
 Install: qcs615/Qualcomm/QCS615-RIDE	cdsp	CDSP.VT.2.2.c4-00019-SM6150-1
 
+# QCS615 Talos Lyra EVK
+Link: qcs615/Qualcomm/QCS615-RIDE/dsp/adsp qcs615/Qualcomm/Talos-Lyra-EVK/dsp/adsp
+Link: qcs615/Qualcomm/QCS615-RIDE/dsp/cdsp qcs615/Qualcomm/Talos-Lyra-EVK/dsp/cdsp
+
 # Thundercomm RUBIK Pi 3
 Install: qcs6490/Thundercomm/RubikPi3	adsp	ADSP.HT.5.5.c8-00256.2-KODIAK-1
 Link: qcm6490/Thundercomm/RB3gen2/dsp/cdsp	qcs6490/Thundercomm/RubikPi3/dsp/cdsp
