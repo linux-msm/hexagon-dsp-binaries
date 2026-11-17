@@ -43,6 +43,11 @@ Machine: kaanapali/Qualcomm/Kaanapali-MTP	Qualcomm Technologies, Inc. Kaanapali 
 Install: kaanapali/Qualcomm/Kaanapali-MTP	adsp	LPAIDSP.HT.1.6.1-00035-KAANAPALI-1
 Install: kaanapali/Qualcomm/Kaanapali-MTP	cdsp	CDSP.HT.3.2.c1-00001-KAANAPALI-3
 
+# Kalambo CRD
+Machine: kalambo/Qualcomm/Kalambo-CRD	Qualcomm Technologies, Inc. Kalambo CRD
+Reuse: kalambo/Qualcomm/Kalambo-CRD	adsp	glymur/Qualcomm/Glymur-CRD
+Reuse: kalambo/Qualcomm/Kalambo-CRD	cdsp	glymur/Qualcomm/Glymur-CRD
+
 # Mahua CRD
 Machine: mahua/Qualcomm/Mahua-CRD	Qualcomm Technologies, Inc. Mahua CRD
 Reuse: mahua/Qualcomm/Mahua-CRD	adsp	glymur/Qualcomm/Glymur-CRD
