@@ -379,3 +379,10 @@ Dir: x1e80100/Qualcomm/Hamoa-IoT-EVK/CDSP.HT.2.9.c1-00094-HAMOA-1
 Device: Qualcomm Technologies, Inc. Hamoa IoT EVK
 Licence: LICENSE.qcom-2
 Status: Redistributable
+
+--------------------------------------------------------------------------
+Dir: qcs8550/Qualcomm/QCS8550/ADSP.HT.5.8-01422-KAILUA_IOT-1
+Device: Thundercomm / Qualcomm Robotics RB5Gen2 Platform
+Licence: LICENSE.qcom-2
+Licence: Notice.qcs8550.txt
+Status: Redistributable
