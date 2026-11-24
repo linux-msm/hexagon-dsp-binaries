@@ -33,6 +33,11 @@ Machine: glymur/Qualcomm/Glymur-CRD	Qualcomm Technologies, Inc. Glymur CRD
 Install: glymur/Qualcomm/Glymur-CRD	adsp	LPAIDSP.HT.1.6.2-00064-GLYMUR-1
 Install: glymur/Qualcomm/Glymur-CRD	cdsp	CDSP.HT.3.3-00315-GLYMUR-1
 
+# Glymur RRD
+Machine: glymur/Qualcomm/Glymur-RRD	Qualcomm Technologies, Inc. Glymur RRD
+Reuse: glymur/Qualcomm/Glymur-RRD	adsp	glymur/Qualcomm/Glymur-CRD
+Reuse: glymur/Qualcomm/Glymur-RRD	cdsp	glymur/Qualcomm/Glymur-CRD
+
 # HAWI MTP
 Machine: hawi/Qualcomm/Hawi-MTP	Qualcomm Technologies, Inc. Hawi MTP
 Install: hawi/Qualcomm/Hawi-MTP	adsp	LPAIDSP.HT.1.6-00701.4-HAWI-3
