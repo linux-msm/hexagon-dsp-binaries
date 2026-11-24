@@ -183,7 +183,7 @@ Reuse: shikra/Qualcomm/Shikra-CQM-EVK	cdsp	shikra/Qualcomm/Shikra-CQS-EVK
 
 # Shikra CQS EVK
 Machine: shikra/Qualcomm/Shikra-CQS-EVK	Qualcomm Technologies, Inc. Shikra CQS EVK
-Install: shikra/Qualcomm/Shikra-CQS-EVK	cdsp	CDSP.VT.2.4.3-00124-SHIKRA-2
+Install: shikra/Qualcomm/Shikra-CQS-EVK	cdsp	CDSP.VT.2.4.3-00131-SHIKRA-2
 
 # Shikra IQS EVK
 Machine: shikra/Qualcomm/Shikra-IQS-EVK	Qualcomm Technologies, Inc. Shikra IQS EVK
