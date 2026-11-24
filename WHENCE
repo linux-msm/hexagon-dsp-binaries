@@ -21,7 +21,9 @@ Origin: https://releases.linaro.org/96boards/dragonboard820c/qualcomm/firmware/l
 
 -------------------------------------------------------------------------
 Dir: eliza/Qualcomm/Eliza-MTP/CDSP.HT.3.1-00889-PAKALA-1
+Dir: eliza/Qualcomm/Eliza-MTP/CDSP.HT.3.1-00893-PAKALA-1
 Dir: eliza/Qualcomm/Eliza-MTP/LPAIDSP.HT.1.2.c2-00064-PAKALA-3
+Dir: eliza/Qualcomm/Eliza-MTP/LPAIDSP.HT.1.2.c2-00080-PAKALA-1
 Device: Qualcomm Technologies, Inc. Eliza MTP
 Licence: LICENSE.qcom-2
 Status: Redistributable
