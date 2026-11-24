@@ -25,8 +25,8 @@ Reuse: eliza/Qualcomm/Eliza-CQS-EVK	cdsp	eliza/Qualcomm/Eliza-MTP
 
 # ELIZA MTP
 Machine: eliza/Qualcomm/Eliza-MTP	Qualcomm Technologies, Inc. Eliza MTP
-Install: eliza/Qualcomm/Eliza-MTP	adsp	LPAIDSP.HT.1.2.c2-00064-PAKALA-3
-Install: eliza/Qualcomm/Eliza-MTP	cdsp	CDSP.HT.3.1-00889-PAKALA-1
+Install: eliza/Qualcomm/Eliza-MTP	adsp	LPAIDSP.HT.1.2.c2-00080-PAKALA-1
+Install: eliza/Qualcomm/Eliza-MTP	cdsp	CDSP.HT.3.1-00893-PAKALA-1
 
 # Glymur CRD
 Machine: glymur/Qualcomm/Glymur-CRD	Qualcomm Technologies, Inc. Glymur CRD
