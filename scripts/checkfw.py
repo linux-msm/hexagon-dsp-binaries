@@ -17,6 +17,21 @@ from check import load_config
 # Print warnings about ignored hash mismatches only when V is set non-empty.
 VERBOSE = bool(os.environ.get('V'))
 
+# Also report warnings as annotations when running under GitHub Actions.
+GITHUB_ACTIONS = os.environ.get('GITHUB_ACTIONS') == 'true'
+
+def warning(msg, lineno=None):
+    print(msg)
+
+    if not GITHUB_ACTIONS:
+        return
+
+    msg = msg.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
+    if lineno is None:
+        print("::warning::%s" % msg)
+    else:
+        print("::warning file=config.txt,line=%d::%s" % (lineno, msg))
+
 def segment_hashes(data):
     """Return the per-segment SHA-256 digests of a Hexagon ELF, or None.
 
@@ -181,13 +196,13 @@ def main():
             mismatch = f"version mismatch %s %s vs %s %s" % (path, version, fws[path]['filename'], fws[path]['version'])
 
         if mismatch:
-            print(mismatch)
+            warning(mismatch, data[1])
         else:
-            print("no match for DSP binaries", path, "version", version)
+            warning("no match for DSP binaries %s version %s" % (path, version), data[1])
 
     for data in fws.values():
         if not data['seen']:
-            print("no match for DSP firmware", data["filename"], "version", data["version"])
+            warning("no match for DSP firmware %s version %s" % (data["filename"], data["version"]))
 
     return 0 if okay else 1
 
