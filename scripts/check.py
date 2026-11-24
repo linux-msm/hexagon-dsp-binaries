@@ -215,16 +215,19 @@ def check_config(data, dirs):
     return ret
 
 def list_git():
+    """Return the files tracked by git, or None if listing them failed."""
     if not os.path.exists(".git"):
         sys.stderr.write("Skipping git ls-files check, no .git dir\n")
-        return None
+        return []
 
     git = os.popen("git ls-files")
-    for file in git:
-        yield file.rstrip("\n")
+    files = [file.rstrip("\n") for file in git]
 
     if git.close():
-        sys.stderr.write("WHENCE: skipped contents validation, git file listing failed\n")
+        sys.stderr.write("WHENCE: contents validation failed, git file listing failed\n")
+        return None
+
+    return files
 
 def load_schema():
     with open("schema.json", encoding="utf-8") as file:
@@ -412,7 +415,12 @@ def main():
 
     known_files = ['.gitignore', 'config.txt', 'Makefile', 'TODO', 'README.md', 'WHENCE', 'schema.json']
 
-    for file in list_git():
+    files = list_git()
+    if files is None:
+        okay = False
+        files = []
+
+    for file in files:
         if os.path.dirname(file) in dirs:
             continue
 
