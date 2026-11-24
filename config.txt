@@ -197,7 +197,7 @@ Install: sm8250/Thundercomm/RB5		sdsp	SLPI.HY.3.1-00049-SM8250AZL-2
 
 # SM8750 MTP
 Machine: sm8750/Qualcomm/SM8750-MTP	Qualcomm Technologies, Inc. SM8750 MTP
-Install: sm8750/Qualcomm/SM8750-MTP	adsp	LPAIDSP.HT.1.2.c2-00021-PAKALA-1
+Install: sm8750/Qualcomm/SM8750-MTP	adsp	LPAIDSP.HT.1.2.c2-00080-PAKALA-1
 Install: sm8750/Qualcomm/SM8750-MTP	cdsp	CDSP.HT.3.1-00889-PAKALA-1
 
 # Hamoa IoT EVK
