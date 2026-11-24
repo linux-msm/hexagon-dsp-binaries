@@ -61,7 +61,7 @@ Reuse: maili/Qualcomm/Maili-MTP	cdsp	hawi/Qualcomm/Hawi-MTP
 # SA8797P Ride
 Machine: nord/Qualcomm/SA8797P-Ride	Qualcomm Technologies, Inc. SA8797P Ride
 Install: nord/Qualcomm/SA8797P-Ride	adsp	adsp-HPASS.AT.1.0.1-00032-NORD-1
-Install: nord/Qualcomm/SA8797P-Ride	adsp1	adsp1-HPASS.AT.1.0.1-00032-NORD-1
+Install: nord/Qualcomm/SA8797P-Ride	adsp1	adsp1-HPASS.AT.1.0.1-00003-NORD-6
 Install: nord/Qualcomm/SA8797P-Ride	cdsp	cdsp-NSP.AT.1.0-00579-NORD-1
 
 # Arduino Imola
