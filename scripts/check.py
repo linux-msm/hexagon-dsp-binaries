@@ -127,7 +127,7 @@ def load_config():
 
             raise Exception("config.txt: %d: failed to parse '%s'" % (lineno, line[:-1]))
 
-DSPS = [ "adsp", "adsp1", "cdsp", "sdsp", "cdsp1", "gdsp0", "gdsp1" ]
+DSPS = [ "adsp", "adsp1", "cdsp", "sdsp", "cdsp1", "gdsp0", "gdsp1", "hpass_audio", "hpass_computelite" ]
 ARCH_DSPS = [ "adsp", "cdsp", "mdsp", "sdsp" ]
 
 def check_install_config(data, dirs):

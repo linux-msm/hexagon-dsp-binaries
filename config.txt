@@ -58,11 +58,17 @@ Machine: maili/Qualcomm/Maili-MTP	Qualcomm Technologies, Inc. Maili MTP
 Install: maili/Qualcomm/Maili-MTP	adsp	LPAIDSP.HT.1.6-00701.4-HAWI-3
 Reuse: maili/Qualcomm/Maili-MTP	cdsp	hawi/Qualcomm/Hawi-MTP
 
+# IQ10 RRD
+Machine: nord/Qualcomm/IQ10-RRD	Qualcomm Technologies, Inc. IQ10 RRD
+Reuse: nord/Qualcomm/IQ10-RRD	cdsp	nord/Qualcomm/SA8797P-Ride
+Reuse: nord/Qualcomm/IQ10-RRD	hpass_audio	nord/Qualcomm/SA8797P-Ride
+Reuse: nord/Qualcomm/IQ10-RRD	hpass_computelite	nord/Qualcomm/SA8797P-Ride
+
 # SA8797P Ride
 Machine: nord/Qualcomm/SA8797P-Ride	Qualcomm Technologies, Inc. SA8797P Ride
-Install: nord/Qualcomm/SA8797P-Ride	adsp	adsp-HPASS.AT.1.0.1-00032-NORD-1
-Install: nord/Qualcomm/SA8797P-Ride	adsp1	adsp1-HPASS.AT.1.0.1-00003-NORD-6
 Install: nord/Qualcomm/SA8797P-Ride	cdsp	cdsp-NSP.AT.1.0-00579-NORD-1
+Install: nord/Qualcomm/SA8797P-Ride	hpass_audio	adsp-HPASS.AT.1.0.1-00032-NORD-1
+Install: nord/Qualcomm/SA8797P-Ride	hpass_computelite	adsp1-HPASS.AT.1.0.1-00003-NORD-6
 
 # Arduino Imola
 Machine: qcm2290/Arduino/Imola	Arduino UnoQ
